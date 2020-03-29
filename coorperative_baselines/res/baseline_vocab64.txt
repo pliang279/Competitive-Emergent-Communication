@@ -1,0 +1,443 @@
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:69: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  self.rangeInds = torch.range(0, self.numInst['train']-1).long();
+Arguments:
+	      useGPU : True
+	   numRounds : 2
+	  hiddenSize : 50
+	 negFraction : 0.8
+	   numEpochs : 100000
+	 imgFeatSize : 20
+	   batchSize : 1000
+	   rlNegMult : 50
+	   qOutVocab : 64
+	     dataset : data/toy64_split_0.8.json
+	     rlScale : 100.0
+	learningRate : 0.01
+	   embedSize : 20
+	       tuneR : 0
+	   rlPosMult : 2
+	        seed : 0
+	   aOutVocab : 64
+	    remember : False
+Answerer(
+  (inNet): Embedding(128, 20)
+  (outNet): Linear(in_features=50, out_features=64, bias=True)
+  (softmax): Softmax(dim=1)
+  (imgNet): Embedding(12, 20)
+  (rnn): LSTMCell(80, 50)
+)
+Questioner(
+  (inNet): Embedding(137, 20)
+  (outNet): Linear(in_features=50, out_features=64, bias=True)
+  (softmax): Softmax(dim=1)
+  (rnn): LSTMCell(20, 50)
+  (predictRNN): LSTMCell(20, 50)
+  (predictNet): Linear(in_features=50, out_features=12, bias=True)
+)
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:182: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  tasks = torch.range(0, self.numPairTasks-1).long();
+[Wed, 08 Jan 2020 02:01:16][Iter: 0][Ep: 0.00][R: -9.9230][Tr: 0.00 Te: 0.00]
+[Wed, 08 Jan 2020 02:01:59][Iter: 1000][Ep: 1000.00][R: -9.6390][Tr: 3.27 Te: 1.28]
+[Wed, 08 Jan 2020 02:02:43][Iter: 2000][Ep: 2000.00][R: -8.9182][Tr: 10.78 Te: 3.85]
+[Wed, 08 Jan 2020 02:03:28][Iter: 3000][Ep: 3000.00][R: -6.1556][Tr: 37.58 Te: 15.38]
+[Wed, 08 Jan 2020 02:04:13][Iter: 4000][Ep: 4000.00][R: -3.5063][Tr: 65.03 Te: 32.05]
+[Wed, 08 Jan 2020 02:04:57][Iter: 5000][Ep: 5000.00][R: -1.1091][Tr: 92.16 Te: 30.77]
+Saving : models/tasks_final_Wed-08-Jan-2020-02:05:38_50H_0.0100lr_False_64_64.pickle
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:69: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  self.rangeInds = torch.range(0, self.numInst['train']-1).long();
+Arguments:
+	      useGPU : True
+	   numRounds : 2
+	  hiddenSize : 50
+	 negFraction : 0.8
+	   numEpochs : 100000
+	 imgFeatSize : 20
+	   batchSize : 1000
+	   rlNegMult : 50
+	   qOutVocab : 64
+	     dataset : data/toy64_split_0.8.json
+	     rlScale : 100.0
+	learningRate : 0.01
+	   embedSize : 20
+	       tuneR : 0
+	   rlPosMult : 2
+	        seed : 1
+	   aOutVocab : 64
+	    remember : False
+Answerer(
+  (inNet): Embedding(128, 20)
+  (outNet): Linear(in_features=50, out_features=64, bias=True)
+  (softmax): Softmax(dim=1)
+  (imgNet): Embedding(12, 20)
+  (rnn): LSTMCell(80, 50)
+)
+Questioner(
+  (inNet): Embedding(137, 20)
+  (outNet): Linear(in_features=50, out_features=64, bias=True)
+  (softmax): Softmax(dim=1)
+  (rnn): LSTMCell(20, 50)
+  (predictRNN): LSTMCell(20, 50)
+  (predictNet): Linear(in_features=50, out_features=12, bias=True)
+)
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:182: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  tasks = torch.range(0, self.numPairTasks-1).long();
+[Wed, 08 Jan 2020 02:05:47][Iter: 0][Ep: 0.00][R: -9.9230][Tr: 0.00 Te: 0.00]
+[Wed, 08 Jan 2020 02:06:32][Iter: 1000][Ep: 1000.00][R: -9.7393][Tr: 1.31 Te: 0.00]
+[Wed, 08 Jan 2020 02:07:18][Iter: 2000][Ep: 2000.00][R: -7.6746][Tr: 23.53 Te: 10.26]
+[Wed, 08 Jan 2020 02:08:03][Iter: 3000][Ep: 3000.00][R: -3.8497][Tr: 60.13 Te: 17.95]
+[Wed, 08 Jan 2020 02:08:48][Iter: 4000][Ep: 4000.00][R: -0.9772][Tr: 97.39 Te: 21.79]
+Saving : models/tasks_final_Wed-08-Jan-2020-02:09:13_50H_0.0100lr_False_64_64.pickle
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:69: UserWarning: t[Wed, 08 Jan 2020 02:09:16][Iter: 6000][Ep: 6000.00][R: -0.6306][Tr: 95.75 Te: 19.23]
+Saving : models/tasks_final_Wed-08-Jan-2020-02:10:31_50H_0.0100lr_False_64_64.pickle
+.range(0, self.numInst['train']-1).long();
+Arguments:
+	      useGPU : True
+	   numRounds : 2
+	  hiddenSize : 50
+	 negFraction : 0.8
+	   numEpochs : 100000
+	 imgFeatSize : 20
+	   batchSize : 1000
+	   rlNegMult : 50
+	   qOutVocab : 64
+	     dataset : data/toy64_split_0.8.json
+	     rlScale : 100.0
+	learningRate : 0.01
+	   embedSize : 20
+	       tuneR : 0
+	   rlPosMult : 2
+	        seed : 2
+	   aOutVocab : 64
+	    remember : False
+Answerer(
+  (inNet): Embedding(128, 20)
+  (outNet): Linear(in_features=50, out_features=64, bias=True)
+  (softmax): Softmax(dim=1)
+  (imgNet): Embedding(12, 20)
+  (rnn): LSTMCell(80, 50)
+)
+Questioner(
+  (inNet): Embedding(137, 20)
+  (outNet): Linear(in_features=50, out_features=64, bias=True)
+  (softmax): Softmax(dim=1)
+  (rnn): LSTMCell(20, 50)
+  (predictRNN): LSTMCell(20, 50)
+  (predictNet): Linear(in_features=50, out_features=12, bias=True)
+)
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:182: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  tasks = torch.range(0, self.numPairTasks-1).long();
+[Wed, 08 Jan 2020 02:09:21][Iter: 0][Ep: 0.00][R: -9.9230][Tr: 0.33 Te: 0.00]
+[Wed, 08 Jan 2020 02:10:06][Iter: 1000][Ep: 1000.00][R: -9.4600][Tr: 5.23 Te: 0.00]
+[Wed, 08 Jan 2020 02:10:50][Iter: 2000][Ep: 2000.00][R: -8.1511][Tr: 19.61 Te: 1.28]
+[Wed, 08 Jan 2020 02:11:32][Iter: 3000][Ep: 3000.00][R: -3.8162][Tr: 67.97 Te: 14.10]
+Saving : models/tasks_final_Wed-08-Jan-2020-02:12:10_50H_0.0100lr_False_64_64.pickle
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:69: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  self.rangeInds = torch.range(0, self.numInst['train']-1).long();
+Arguments:
+	      useGPU : True
+	   numRounds : 2
+	  hiddenSize : 50
+	 negFraction : 0.8
+	   numEpochs : 100000
+	 imgFeatSize : 20
+	   batchSize : 1000
+	   rlNegMult : 50
+	   qOutVocab : 64
+	     dataset : data/toy64_split_0.8.json
+	     rlScale : 100.0
+	learningRate : 0.01
+	   embedSize : 20
+	       tuneR : 0
+	   rlPosMult : 2
+	        seed : 3
+	   aOutVocab : 64
+	    remember : False
+Answerer(
+  (inNet): Embedding(128, 20)
+  (outNet): Linear(in_features=50, out_features=64, bias=True)
+  (softmax): Softmax(dim=1)
+  (imgNet): Embedding(12, 20)
+  (rnn): LSTMCell(80, 50)
+)
+Questioner(
+  (inNet): Embedding(137, 20)
+  (outNet): Linear(in_features=50, out_features=64, bias=True)
+  (softmax): Softmax(dim=1)
+  (rnn): LSTMCell(20, 50)
+  (predictRNN): LSTMCell(20, 50)
+  (predictNet): Linear(in_features=50, out_features=12, bias=True)
+)
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:182: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  tasks = torch.range(0, self.numPairTasks-1).long();
+[Wed, 08 Jan 2020 02:12:18][Iter: 0][Ep: 0.00][R: -9.9670][Tr: 0.33 Te: 0.00]
+[Wed, 08 Jan 2020 02:13:02][Iter: 1000][Ep: 1000.00][R: -9.1134][Tr: 9.15 Te: 0.00]
+[Wed, 08 Jan 2020 02:13:44][Iter: 2000][Ep: 2000.00][R: -8.0385][Tr: 19.93 Te: 5.13]
+[Wed, 08 Jan 2020 02:14:28][Iter: 3000][Ep: 3000.00][R: -6.4104][Tr: 35.29 Te: 17.95]
+[Wed, 08 Jan 2020 02:15:12][Iter: 4000][Ep: 4000.00][R: -3.6202][Tr: 60.13 Te: 16.67]
+[Wed, 08 Jan 2020 02:15:55][Iter: 5000][Ep: 5000.00][R: -1.5727][Tr: 79.74 Te: 24.36]
+[Wed, 08 Jan 2020 02:16:39][Iter: 6000][Ep: 6000.00][R: -0.7962][Tr: 96.08 Te: 20.51]
+Saving : models/tasks_final_Wed-08-Jan-2020-02:17:21_50H_0.0100lr_False_64_64.pickle
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:69: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  self.rangeInds = torch.range(0, self.numInst['train']-1).long();
+Arguments:
+	      useGPU : True
+	   numRounds : 2
+	  hiddenSize : 50
+	 negFraction : 0.8
+	   numEpochs : 100000
+	 imgFeatSize : 20
+	   batchSize : 1000
+	   rlNegMult : 50
+	   qOutVocab : 64
+	     dataset : data/toy64_split_0.8.json
+	     rlScale : 100.0
+	learningRate : 0.01
+	   embedSize : 20
+	       tuneR : 0
+	   rlPosMult : 2
+	        seed : 4
+	   aOutVocab : 64
+	    remember : False
+Answerer(
+  (inNet): Embedding(128, 20)
+  (outNet): Linear(in_features=50, out_features=64, bias=True)
+  (softmax): Softmax(dim=1)
+  (imgNet): Embedding(12, 20)
+  (rnn): LSTMCell(80, 50)
+)
+Questioner(
+  (inNet): Embedding(137, 20)
+  (outNet): Linear(in_features=50, out_features=64, bias=True)
+  (softmax): Softmax(dim=1)
+  (rnn): LSTMCell(20, 50)
+  (predictRNN): LSTMCell(20, 50)
+  (predictNet): Linear(in_features=50, out_features=12, bias=True)
+)
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:182: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  tasks = torch.range(0, self.numPairTasks-1).long();
+[Wed, 08 Jan 2020 02:17:28][Iter: 0][Ep: 0.00][R: -9.9010][Tr: 0.00 Te: 1.28]
+[Wed, 08 Jan 2020 02:18:09][Iter: 1000][Ep: 1000.00][R: -9.4227][Tr: 5.23 Te: 0.00]
+[Wed, 08 Jan 2020 02:18:50][Iter: 2000][Ep: 2000.00][R: -7.1191][Tr: 29.74 Te: 6.41]
+[Wed, 08 Jan 2020 02:19:32][Iter: 3000][Ep: 3000.00][R: -1.2939][Tr: 96.41 Te: 29.49]
+Saving : models/tasks_final_Wed-08-Jan-2020-02:19:46_50H_0.0100lr_False_64_64.pickle
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:69: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  self.rangeInds = torch.range(0, self.numInst['train']-1).long();
+Arguments:
+	      useGPU : True
+	   numRounds : 2
+	  hiddenSize : 50
+	 negFraction : 0.8
+	   numEpochs : 100000
+	 imgFeatSize : 20
+	   batchSize : 1000
+	   rlNegMult : 50
+	   qOutVocab : 64
+	     dataset : data/toy64_split_0.8.json
+	     rlScale : 100.0
+	learningRate : 0.01
+	   embedSize : 20
+	       tuneR : 0
+	   rlPosMult : 2
+	        seed : 5
+	   aOutVocab : 64
+	    remember : False
+Answerer(
+  (inNet): Embedding(128, 20)
+  (outNet): Linear(in_features=50, out_features=64, bias=True)
+  (softmax): Softmax(dim=1)
+  (imgNet): Embedding(12, 20)
+  (rnn): LSTMCell(80, 50)
+)
+Questioner(
+  (inNet): Embedding(137, 20)
+  (outNet): Linear(in_features=50, out_features=64, bias=True)
+  (softmax): Softmax(dim=1)
+  (rnn): LSTMCell(20, 50)
+  (predictRNN): LSTMCell(20, 50)
+  (predictNet): Linear(in_features=50, out_features=12, bias=True)
+)
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:182: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  tasks = torch.range(0, self.numPairTasks-1).long();
+[Wed, 08 Jan 2020 02:19:54][Iter: 0][Ep: 0.00][R: -9.8790][Tr: 0.00 Te: 0.00]
+[Wed, 08 Jan 2020 02:20:34][Iter: 1000][Ep: 1000.00][R: -9.4948][Tr: 4.90 Te: 1.28]
+[Wed, 08 Jan 2020 02:21:15][Iter: 2000][Ep: 2000.00][R: -9.0387][Tr: 10.46 Te: 0.00]
+[Wed, 08 Jan 2020 02:21:56][Iter: 3000][Ep: 3000.00][R: -6.2962][Tr: 36.60 Te: 14.10]
+[Wed, 08 Jan 2020 02:22:37][Iter: 4000][Ep: 4000.00][R: -3.3743][Tr: 64.38 Te: 21.79]
+[Wed, 08 Jan 2020 02:23:18][Iter: 5000][Ep: 5000.00][R: -1.6038][Tr: 82.03 Te: 21.79]
+[Wed, 08 Jan 2020 02:23:58][Iter: 6000][Ep: 6000.00][R: -0.8442][Tr: 92.16 Te: 26.92]
+Saving : models/tasks_final_Wed-08-Jan-2020-02:24:27_50H_0.0100lr_False_64_64.pickle
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:69: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  self.rangeInds = torch.range(0, self.numInst['train']-1).long();
+Arguments:
+	      useGPU : True
+	   numRounds : 2
+	  hiddenSize : 50
+	 negFraction : 0.8
+	   numEpochs : 100000
+	 imgFeatSize : 20
+	   batchSize : 1000
+	   rlNegMult : 50
+	   qOutVocab : 64
+	     dataset : data/toy64_split_0.8.json
+	     rlScale : 100.0
+	learningRate : 0.01
+	   embedSize : 20
+	       tuneR : 0
+	   rlPosMult : 2
+	        seed : 6
+	   aOutVocab : 64
+	    remember : False
+Answerer(
+  (inNet): Embedding(128, 20)
+  (outNet): Linear(in_features=50, out_features=64, bias=True)
+  (softmax): Softmax(dim=1)
+  (imgNet): Embedding(12, 20)
+  (rnn): LSTMCell(80, 50)
+)
+Questioner(
+  (inNet): Embedding(137, 20)
+  (outNet): Linear(in_features=50, out_features=64, bias=True)
+  (softmax): Softmax(dim=1)
+  (rnn): LSTMCell(20, 50)
+  (predictRNN): LSTMCell(20, 50)
+  (predictNet): Linear(in_features=50, out_features=12, bias=True)
+)
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:182: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  tasks = torch.range(0, self.numPairTasks-1).long();
+[Wed, 08 Jan 2020 02:24:35][Iter: 0][Ep: 0.00][R: -9.8790][Tr: 0.00 Te: 0.00]
+[Wed, 08 Jan 2020 02:25:18][Iter: 1000][Ep: 1000.00][R: -9.5159][Tr: 5.23 Te: 0.00]
+[Wed, 08 Jan 2020 02:26:01][Iter: 2000][Ep: 2000.00][R: -8.7396][Tr: 14.38 Te: 3.85]
+[Wed, 08 Jan 2020 02:26:44][Iter: 3000][Ep: 3000.00][R: -6.3156][Tr: 39.87 Te: 11.54]
+[Wed, 08 Jan 2020 02:27:27][Iter: 4000][Ep: 4000.00][R: -2.1637][Tr: 82.35 Te: 23.08]
+Saving : models/tasks_final_Wed-08-Jan-2020-02:27:59_50H_0.0100lr_False_64_64.pickle
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:69: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  self.rangeInds = torch.range(0, self.numInst['train']-1).long();
+Arguments:
+	      useGPU : True
+	   numRounds : 2
+	  hiddenSize : 50
+	 negFraction : 0.8
+	   numEpochs : 100000
+	 imgFeatSize : 20
+	   batchSize : 1000
+	   rlNegMult : 50
+	   qOutVocab : 64
+	     dataset : data/toy64_split_0.8.json
+	     rlScale : 100.0
+	learningRate : 0.01
+	   embedSize : 20
+	       tuneR : 0
+	   rlPosMult : 2
+	        seed : 7
+	   aOutVocab : 64
+	    remember : False
+Answerer(
+  (inNet): Embedding(128, 20)
+  (outNet): Linear(in_features=50, out_features=64, bias=True)
+  (softmax): Softmax(dim=1)
+  (imgNet): Embedding(12, 20)
+  (rnn): LSTMCell(80, 50)
+)
+Questioner(
+  (inNet): Embedding(137, 20)
+  (outNet): Linear(in_features=50, out_features=64, bias=True)
+  (softmax): Softmax(dim=1)
+  (rnn): LSTMCell(20, 50)
+  (predictRNN): LSTMCell(20, 50)
+  (predictNet): Linear(in_features=50, out_features=12, bias=True)
+)
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:182: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  tasks = torch.range(0, self.numPairTasks-1).long();
+[Wed, 08 Jan 2020 02:28:07][Iter: 0][Ep: 0.00][R: -9.9230][Tr: 0.33 Te: 0.00]
+[Wed, 08 Jan 2020 02:28:50][Iter: 1000][Ep: 1000.00][R: -9.3810][Tr: 6.21 Te: 0.00]
+[Wed, 08 Jan 2020 02:29:33][Iter: 2000][Ep: 2000.00][R: -8.0423][Tr: 19.61 Te: 1.28]
+[Wed, 08 Jan 2020 02:30:17][Iter: 3000][Ep: 3000.00][R: -6.1759][Tr: 35.95 Te: 6.41]
+[Wed, 08 Jan 2020 02:31:00][Iter: 4000][Ep: 4000.00][R: -3.9931][Tr: 63.73 Te: 15.38]
+[Wed, 08 Jan 2020 02:31:42][Iter: 5000][Ep: 5000.00][R: -0.8940][Tr: 97.06 Te: 21.79]
+Saving : models/tasks_final_Wed-08-Jan-2020-02:32:02_50H_0.0100lr_False_64_64.pickle
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:69: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  self.rangeInds = torch.range(0, self.numInst['train']-1).long();
+Arguments:
+	      useGPU : True
+	   numRounds : 2
+	  hiddenSize : 50
+	 negFraction : 0.8
+	   numEpochs : 100000
+	 imgFeatSize : 20
+	   batchSize : 1000
+	   rlNegMult : 50
+	   qOutVocab : 64
+	     dataset : data/toy64_split_0.8.json
+	     rlScale : 100.0
+	learningRate : 0.01
+	   embedSize : 20
+	       tuneR : 0
+	   rlPosMult : 2
+	        seed : 8
+	   aOutVocab : 64
+	    remember : False
+Answerer(
+  (inNet): Embedding(128, 20)
+  (outNet): Linear(in_features=50, out_features=64, bias=True)
+  (softmax): Softmax(dim=1)
+  (imgNet): Embedding(12, 20)
+  (rnn): LSTMCell(80, 50)
+)
+Questioner(
+  (inNet): Embedding(137, 20)
+  (outNet): Linear(in_features=50, out_features=64, bias=True)
+  (softmax): Softmax(dim=1)
+  (rnn): LSTMCell(20, 50)
+  (predictRNN): LSTMCell(20, 50)
+  (predictNet): Linear(in_features=50, out_features=12, bias=True)
+)
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:182: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  tasks = torch.range(0, self.numPairTasks-1).long();
+[Wed, 08 Jan 2020 02:32:10][Iter: 0][Ep: 0.00][R: -9.9230][Tr: 0.00 Te: 0.00]
+[Wed, 08 Jan 2020 02:32:52][Iter: 1000][Ep: 1000.00][R: -8.8908][Tr: 11.11 Te: 1.28]
+[Wed, 08 Jan 2020 02:33:35][Iter: 2000][Ep: 2000.00][R: -6.5714][Tr: 35.95 Te: 12.82]
+[Wed, 08 Jan 2020 02:34:17][Iter: 3000][Ep: 3000.00][R: -3.0137][Tr: 72.55 Te: 21.79]
+Saving : models/tasks_final_Wed-08-Jan-2020-02:34:51_50H_0.0100lr_False_64_64.pickle
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:69: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  self.rangeInds = torch.range(0, self.numInst['train']-1).long();
+Arguments:
+	      useGPU : True
+	   numRounds : 2
+	  hiddenSize : 50
+	 negFraction : 0.8
+	   numEpochs : 100000
+	 imgFeatSize : 20
+	   batchSize : 1000
+	   rlNegMult : 50
+	   qOutVocab : 64
+	     dataset : data/toy64_split_0.8.json
+	     rlScale : 100.0
+	learningRate : 0.01
+	   embedSize : 20
+	       tuneR : 0
+	   rlPosMult : 2
+	        seed : 9
+	   aOutVocab : 64
+	    remember : False
+Answerer(
+  (inNet): Embedding(128, 20)
+  (outNet): Linear(in_features=50, out_features=64, bias=True)
+  (softmax): Softmax(dim=1)
+  (imgNet): Embedding(12, 20)
+  (rnn): LSTMCell(80, 50)
+)
+Questioner(
+  (inNet): Embedding(137, 20)
+  (outNet): Linear(in_features=50, out_features=64, bias=True)
+  (softmax): Softmax(dim=1)
+  (rnn): LSTMCell(20, 50)
+  (predictRNN): LSTMCell(20, 50)
+  (predictNet): Linear(in_features=50, out_features=12, bias=True)
+)
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:182: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  tasks = torch.range(0, self.numPairTasks-1).long();
+[Wed, 08 Jan 2020 02:35:00][Iter: 0][Ep: 0.00][R: -9.9230][Tr: 0.00 Te: 0.00]
+[Wed, 08 Jan 2020 02:35:40][Iter: 1000][Ep: 1000.00][R: -8.7840][Tr: 11.76 Te: 0.00]
+[Wed, 08 Jan 2020 02:36:20][Iter: 2000][Ep: 2000.00][R: -7.1628][Tr: 29.08 Te: 10.26]
+[Wed, 08 Jan 2020 02:37:02][Iter: 3000][Ep: 3000.00][R: -3.5534][Tr: 67.97 Te: 19.23]
+Saving : models/tasks_final_Wed-08-Jan-2020-02:37:27_50H_0.0100lr_False_64_64.pickle
