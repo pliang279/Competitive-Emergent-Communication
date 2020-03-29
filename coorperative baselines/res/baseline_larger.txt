@@ -1,0 +1,818 @@
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:69: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  self.rangeInds = torch.range(0, self.numInst['train']-1).long();
+Arguments:
+	   numRounds : 2
+	  hiddenSize : 150
+	 negFraction : 0.8
+	 imgFeatSize : 20
+	   batchSize : 1000
+	      useGPU : True
+	   qOutVocab : 3
+	     dataset : data/toy64_split_0.8.json
+	     rlScale : 100.0
+	learningRate : 0.01
+	   embedSize : 20
+	   numEpochs : 50000
+	        seed : 0
+	   aOutVocab : 4
+	    remember : False
+Answerer(
+  (inNet): Embedding(7, 20)
+  (outNet): Linear(in_features=150, out_features=4, bias=True)
+  (softmax): Softmax()
+  (imgNet): Embedding(12, 20)
+  (rnn): LSTMCell(80, 150)
+)
+Questioner(
+  (inNet): Embedding(16, 20)
+  (outNet): Linear(in_features=150, out_features=3, bias=True)
+  (softmax): Softmax()
+  (rnn): LSTMCell(20, 150)
+  (predictRNN): LSTMCell(20, 150)
+  (predictNet): Linear(in_features=150, out_features=12, bias=True)
+)
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:182: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  tasks = torch.range(0, self.numPairTasks-1).long();
+[Tue, 03 Sep 2019 09:12:10][Iter: 0][Ep: 0.00][R: -9.8900][Tr: 0.00 Te: 0.00]
+[Tue, 03 Sep 2019 09:13:45][Iter: 1000][Ep: 1000.00][R: -9.6609][Tr: 3.27 Te: 1.28]
+[Tue, 03 Sep 2019 09:15:20][Iter: 2000][Ep: 2000.00][R: -8.5927][Tr: 14.05 Te: 3.85]
+[Tue, 03 Sep 2019 09:16:55][Iter: 3000][Ep: 3000.00][R: -6.7252][Tr: 31.37 Te: 2.56]
+[Tue, 03 Sep 2019 09:18:29][Iter: 4000][Ep: 4000.00][R: -5.3729][Tr: 44.12 Te: 11.54]
+[Tue, 03 Sep 2019 09:20:04][Iter: 5000][Ep: 5000.00][R: -4.5754][Tr: 51.96 Te: 11.54]
+[Tue, 03 Sep 2019 09:21:39][Iter: 6000][Ep: 6000.00][R: -4.3130][Tr: 54.25 Te: 16.67]
+[Tue, 03 Sep 2019 09:23:14][Iter: 7000][Ep: 7000.00][R: -3.8982][Tr: 59.48 Te: 17.95]
+[Tue, 03 Sep 2019 09:24:49][Iter: 8000][Ep: 8000.00][R: -4.0247][Tr: 55.56 Te: 21.79]
+[Tue, 03 Sep 2019 09:26:24][Iter: 9000][Ep: 9000.00][R: -3.3754][Tr: 61.44 Te: 24.36]
+[Tue, 03 Sep 2019 09:27:59][Iter: 10000][Ep: 10000.00][R: -3.5638][Tr: 60.46 Te: 15.38]
+[Tue, 03 Sep 2019 09:29:31][Iter: 11000][Ep: 11000.00][R: -3.2524][Tr: 63.40 Te: 23.08]
+[Tue, 03 Sep 2019 09:31:05][Iter: 12000][Ep: 12000.00][R: -3.2484][Tr: 63.40 Te: 15.38]
+[Tue, 03 Sep 2019 09:32:38][Iter: 13000][Ep: 13000.00][R: -3.2628][Tr: 63.73 Te: 12.82]
+[Tue, 03 Sep 2019 09:34:13][Iter: 14000][Ep: 14000.00][R: -3.1718][Tr: 65.03 Te: 10.26]
+[Tue, 03 Sep 2019 09:35:47][Iter: 15000][Ep: 15000.00][R: -3.3273][Tr: 63.73 Te: 12.82]
+[Tue, 03 Sep 2019 09:37:22][Iter: 16000][Ep: 16000.00][R: -3.2330][Tr: 65.69 Te: 8.97]
+[Tue, 03 Sep 2019 09:38:57][Iter: 17000][Ep: 17000.00][R: -3.2004][Tr: 65.69 Te: 11.54]
+[Tue, 03 Sep 2019 09:40:31][Iter: 18000][Ep: 18000.00][R: -3.4667][Tr: 63.07 Te: 19.23]
+[Tue, 03 Sep 2019 09:42:06][Iter: 19000][Ep: 19000.00][R: -3.4170][Tr: 63.07 Te: 19.23]
+[Tue, 03 Sep 2019 09:43:41][Iter: 20000][Ep: 20000.00][R: -3.1736][Tr: 65.36 Te: 21.79]
+[Tue, 03 Sep 2019 09:45:15][Iter: 21000][Ep: 21000.00][R: -3.0588][Tr: 66.67 Te: 19.23]
+[Tue, 03 Sep 2019 09:46:49][Iter: 22000][Ep: 22000.00][R: -3.1987][Tr: 66.01 Te: 15.38]
+[Tue, 03 Sep 2019 09:48:24][Iter: 23000][Ep: 23000.00][R: -2.8983][Tr: 66.99 Te: 25.64]
+[Tue, 03 Sep 2019 09:49:58][Iter: 24000][Ep: 24000.00][R: -3.1637][Tr: 65.03 Te: 21.79]
+[Tue, 03 Sep 2019 09:51:32][Iter: 25000][Ep: 25000.00][R: -3.2418][Tr: 62.75 Te: 19.23]
+[Tue, 03 Sep 2019 09:53:06][Iter: 26000][Ep: 26000.00][R: -3.1026][Tr: 65.03 Te: 17.95]
+[Tue, 03 Sep 2019 09:54:41][Iter: 27000][Ep: 27000.00][R: -2.9901][Tr: 67.32 Te: 21.79]
+[Tue, 03 Sep 2019 09:56:15][Iter: 28000][Ep: 28000.00][R: -3.1132][Tr: 66.67 Te: 16.67]
+[Tue, 03 Sep 2019 09:57:49][Iter: 29000][Ep: 29000.00][R: -3.0254][Tr: 65.36 Te: 16.67]
+[Tue, 03 Sep 2019 09:59:22][Iter: 30000][Ep: 30000.00][R: -3.4396][Tr: 62.75 Te: 11.54]
+[Tue, 03 Sep 2019 10:00:56][Iter: 31000][Ep: 31000.00][R: -3.3956][Tr: 60.78 Te: 15.38]
+[Tue, 03 Sep 2019 10:02:29][Iter: 32000][Ep: 32000.00][R: -3.5785][Tr: 60.13 Te: 12.82]
+[Tue, 03 Sep 2019 10:04:03][Iter: 33000][Ep: 33000.00][R: -3.5136][Tr: 59.80 Te: 14.10]
+[Tue, 03 Sep 2019 10:05:34][Iter: 34000][Ep: 34000.00][R: -3.5993][Tr: 62.42 Te: 12.82]
+[Tue, 03 Sep 2019 10:07:08][Iter: 35000][Ep: 35000.00][R: -4.0331][Tr: 56.86 Te: 25.64]
+[Tue, 03 Sep 2019 10:08:39][Iter: 36000][Ep: 36000.00][R: -3.4920][Tr: 57.84 Te: 15.38]
+[Tue, 03 Sep 2019 10:10:10][Iter: 37000][Ep: 37000.00][R: -3.4147][Tr: 64.05 Te: 29.49]
+[Tue, 03 Sep 2019 10:11:38][Iter: 38000][Ep: 38000.00][R: -3.4816][Tr: 63.07 Te: 28.21]
+[Tue, 03 Sep 2019 10:13:06][Iter: 39000][Ep: 39000.00][R: -3.5195][Tr: 64.71 Te: 16.67]
+[Tue, 03 Sep 2019 10:14:36][Iter: 40000][Ep: 40000.00][R: -3.6942][Tr: 57.84 Te: 16.67]
+[Tue, 03 Sep 2019 10:16:04][Iter: 41000][Ep: 41000.00][R: -4.1119][Tr: 53.59 Te: 12.82]
+[Tue, 03 Sep 2019 10:17:33][Iter: 42000][Ep: 42000.00][R: -4.2473][Tr: 56.21 Te: 14.10]
+[Tue, 03 Sep 2019 10:19:06][Iter: 43000][Ep: 43000.00][R: -3.8867][Tr: 57.52 Te: 11.54]
+[Tue, 03 Sep 2019 10:20:37][Iter: 44000][Ep: 44000.00][R: -4.3961][Tr: 52.94 Te: 16.67]
+[Tue, 03 Sep 2019 10:22:10][Iter: 45000][Ep: 45000.00][R: -4.3941][Tr: 51.96 Te: 16.67]
+[Tue, 03 Sep 2019 10:23:41][Iter: 46000][Ep: 46000.00][R: -5.0027][Tr: 48.04 Te: 20.51]
+[Tue, 03 Sep 2019 10:25:11][Iter: 47000][Ep: 47000.00][R: -5.0382][Tr: 47.06 Te: 15.38]
+[Tue, 03 Sep 2019 10:26:43][Iter: 48000][Ep: 48000.00][R: -5.4326][Tr: 42.48 Te: 19.23]
+[Tue, 03 Sep 2019 10:28:15][Iter: 49000][Ep: 49000.00][R: -4.9059][Tr: 49.67 Te: 12.82]
+Saving : models/tasks_final_Tue-03-Sep-2019-10:29:47_150H_0.0100lr_False_4_3.pickle
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:69: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  self.rangeInds = torch.range(0, self.numInst['train']-1).long();
+Arguments:
+	   numRounds : 2
+	  hiddenSize : 150
+	 negFraction : 0.8
+	 imgFeatSize : 20
+	   batchSize : 1000
+	      useGPU : True
+	   qOutVocab : 3
+	     dataset : data/toy64_split_0.8.json
+	     rlScale : 100.0
+	learningRate : 0.01
+	   embedSize : 20
+	   numEpochs : 50000
+	        seed : 1
+	   aOutVocab : 4
+	    remember : False
+Answerer(
+  (inNet): Embedding(7, 20)
+  (outNet): Linear(in_features=150, out_features=4, bias=True)
+  (softmax): Softmax()
+  (imgNet): Embedding(12, 20)
+  (rnn): LSTMCell(80, 150)
+)
+Questioner(
+  (inNet): Embedding(16, 20)
+  (outNet): Linear(in_features=150, out_features=3, bias=True)
+  (softmax): Softmax()
+  (rnn): LSTMCell(20, 150)
+  (predictRNN): LSTMCell(20, 150)
+  (predictNet): Linear(in_features=150, out_features=12, bias=True)
+)
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:182: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  tasks = torch.range(0, self.numPairTasks-1).long();
+[Tue, 03 Sep 2019 10:29:53][Iter: 0][Ep: 0.00][R: -9.9230][Tr: 0.00 Te: 0.00]
+[Tue, 03 Sep 2019 10:31:25][Iter: 1000][Ep: 1000.00][R: -9.8343][Tr: 1.63 Te: 3.85]
+[Tue, 03 Sep 2019 10:32:58][Iter: 2000][Ep: 2000.00][R: -7.7624][Tr: 22.88 Te: 10.26]
+[Tue, 03 Sep 2019 10:34:31][Iter: 3000][Ep: 3000.00][R: -5.8503][Tr: 39.54 Te: 14.10]
+[Tue, 03 Sep 2019 10:36:04][Iter: 4000][Ep: 4000.00][R: -4.9105][Tr: 48.37 Te: 16.67]
+[Tue, 03 Sep 2019 10:37:36][Iter: 5000][Ep: 5000.00][R: -4.2921][Tr: 54.90 Te: 12.82]
+[Tue, 03 Sep 2019 10:39:10][Iter: 6000][Ep: 6000.00][R: -3.9287][Tr: 57.19 Te: 20.51]
+[Tue, 03 Sep 2019 10:40:43][Iter: 7000][Ep: 7000.00][R: -3.8261][Tr: 61.44 Te: 15.38]
+[Tue, 03 Sep 2019 10:42:17][Iter: 8000][Ep: 8000.00][R: -3.5593][Tr: 57.84 Te: 19.23]
+[Tue, 03 Sep 2019 10:43:49][Iter: 9000][Ep: 9000.00][R: -3.4652][Tr: 60.46 Te: 19.23]
+[Tue, 03 Sep 2019 10:45:22][Iter: 10000][Ep: 10000.00][R: -3.3910][Tr: 59.80 Te: 16.67]
+[Tue, 03 Sep 2019 10:46:56][Iter: 11000][Ep: 11000.00][R: -3.6089][Tr: 61.76 Te: 11.54]
+[Tue, 03 Sep 2019 10:48:30][Iter: 12000][Ep: 12000.00][R: -3.5411][Tr: 61.76 Te: 17.95]
+[Tue, 03 Sep 2019 10:50:01][Iter: 13000][Ep: 13000.00][R: -3.4962][Tr: 64.71 Te: 23.08]
+[Tue, 03 Sep 2019 10:51:35][Iter: 14000][Ep: 14000.00][R: -2.9120][Tr: 66.67 Te: 24.36]
+[Tue, 03 Sep 2019 10:53:09][Iter: 15000][Ep: 15000.00][R: -2.4360][Tr: 72.88 Te: 26.92]
+[Tue, 03 Sep 2019 10:54:42][Iter: 16000][Ep: 16000.00][R: -2.8472][Tr: 71.24 Te: 28.21]
+[Tue, 03 Sep 2019 10:56:16][Iter: 17000][Ep: 17000.00][R: -2.2902][Tr: 78.43 Te: 29.49]
+[Tue, 03 Sep 2019 10:57:49][Iter: 18000][Ep: 18000.00][R: -2.4047][Tr: 80.07 Te: 28.21]
+[Tue, 03 Sep 2019 10:59:22][Iter: 19000][Ep: 19000.00][R: -2.4619][Tr: 81.37 Te: 38.46]
+[Tue, 03 Sep 2019 11:00:53][Iter: 20000][Ep: 20000.00][R: -2.6797][Tr: 82.03 Te: 39.74]
+[Tue, 03 Sep 2019 11:02:26][Iter: 21000][Ep: 21000.00][R: -2.3926][Tr: 81.70 Te: 37.18]
+[Tue, 03 Sep 2019 11:03:59][Iter: 22000][Ep: 22000.00][R: -2.4237][Tr: 81.37 Te: 41.03]
+[Tue, 03 Sep 2019 11:05:33][Iter: 23000][Ep: 23000.00][R: -2.3017][Tr: 81.05 Te: 39.74]
+[Tue, 03 Sep 2019 11:07:06][Iter: 24000][Ep: 24000.00][R: -2.3519][Tr: 79.74 Te: 34.62]
+[Tue, 03 Sep 2019 11:08:37][Iter: 25000][Ep: 25000.00][R: -2.1976][Tr: 77.78 Te: 43.59]
+[Tue, 03 Sep 2019 11:10:11][Iter: 26000][Ep: 26000.00][R: -2.3425][Tr: 78.10 Te: 43.59]
+[Tue, 03 Sep 2019 11:11:41][Iter: 27000][Ep: 27000.00][R: -2.9989][Tr: 76.80 Te: 43.59]
+[Tue, 03 Sep 2019 11:13:11][Iter: 28000][Ep: 28000.00][R: -3.1459][Tr: 72.88 Te: 28.21]
+[Tue, 03 Sep 2019 11:14:38][Iter: 29000][Ep: 29000.00][R: -2.6714][Tr: 76.80 Te: 35.90]
+[Tue, 03 Sep 2019 11:16:07][Iter: 30000][Ep: 30000.00][R: -2.4944][Tr: 81.05 Te: 37.18]
+[Tue, 03 Sep 2019 11:17:34][Iter: 31000][Ep: 31000.00][R: -2.1388][Tr: 85.29 Te: 43.59]
+[Tue, 03 Sep 2019 11:19:03][Iter: 32000][Ep: 32000.00][R: -2.2608][Tr: 84.97 Te: 42.31]
+[Tue, 03 Sep 2019 11:20:29][Iter: 33000][Ep: 33000.00][R: -2.5908][Tr: 82.68 Te: 41.03]
+[Tue, 03 Sep 2019 11:21:57][Iter: 34000][Ep: 34000.00][R: -2.2844][Tr: 84.31 Te: 41.03]
+[Tue, 03 Sep 2019 11:23:26][Iter: 35000][Ep: 35000.00][R: -2.5596][Tr: 81.70 Te: 39.74]
+[Tue, 03 Sep 2019 11:24:53][Iter: 36000][Ep: 36000.00][R: -2.5802][Tr: 82.35 Te: 41.03]
+[Tue, 03 Sep 2019 11:26:21][Iter: 37000][Ep: 37000.00][R: -2.0508][Tr: 80.72 Te: 39.74]
+[Tue, 03 Sep 2019 11:27:49][Iter: 38000][Ep: 38000.00][R: -2.2110][Tr: 79.41 Te: 38.46]
+[Tue, 03 Sep 2019 11:29:17][Iter: 39000][Ep: 39000.00][R: -2.1194][Tr: 80.39 Te: 41.03]
+[Tue, 03 Sep 2019 11:30:46][Iter: 40000][Ep: 40000.00][R: -1.8445][Tr: 82.35 Te: 39.74]
+[Tue, 03 Sep 2019 11:32:13][Iter: 41000][Ep: 41000.00][R: -2.4190][Tr: 82.03 Te: 41.03]
+[Tue, 03 Sep 2019 11:33:42][Iter: 42000][Ep: 42000.00][R: -2.1734][Tr: 83.99 Te: 41.03]
+[Tue, 03 Sep 2019 11:35:09][Iter: 43000][Ep: 43000.00][R: -2.4381][Tr: 71.24 Te: 28.21]
+[Tue, 03 Sep 2019 11:36:36][Iter: 44000][Ep: 44000.00][R: -2.3705][Tr: 71.90 Te: 33.33]
+[Tue, 03 Sep 2019 11:38:04][Iter: 45000][Ep: 45000.00][R: -3.0445][Tr: 69.28 Te: 26.92]
+[Tue, 03 Sep 2019 11:39:31][Iter: 46000][Ep: 46000.00][R: -2.6347][Tr: 77.45 Te: 21.79]
+[Tue, 03 Sep 2019 11:41:00][Iter: 47000][Ep: 47000.00][R: -2.6901][Tr: 78.10 Te: 30.77]
+[Tue, 03 Sep 2019 11:42:28][Iter: 48000][Ep: 48000.00][R: -2.1189][Tr: 80.39 Te: 30.77]
+[Tue, 03 Sep 2019 11:43:56][Iter: 49000][Ep: 49000.00][R: -2.0532][Tr: 80.07 Te: 38.46]
+Saving : models/tasks_final_Tue-03-Sep-2019-11:45:23_150H_0.0100lr_False_4_3.pickle
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:69: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  self.rangeInds = torch.range(0, self.numInst['train']-1).long();
+Arguments:
+	   numRounds : 2
+	  hiddenSize : 150
+	 negFraction : 0.8
+	 imgFeatSize : 20
+	   batchSize : 1000
+	      useGPU : True
+	   qOutVocab : 3
+	     dataset : data/toy64_split_0.8.json
+	     rlScale : 100.0
+	learningRate : 0.01
+	   embedSize : 20
+	   numEpochs : 50000
+	        seed : 2
+	   aOutVocab : 4
+	    remember : False
+Answerer(
+  (inNet): Embedding(7, 20)
+  (outNet): Linear(in_features=150, out_features=4, bias=True)
+  (softmax): Softmax()
+  (imgNet): Embedding(12, 20)
+  (rnn): LSTMCell(80, 150)
+)
+Questioner(
+  (inNet): Embedding(16, 20)
+  (outNet): Linear(in_features=150, out_features=3, bias=True)
+  (softmax): Softmax()
+  (rnn): LSTMCell(20, 150)
+  (predictRNN): LSTMCell(20, 150)
+  (predictNet): Linear(in_features=150, out_features=12, bias=True)
+)
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:182: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  tasks = torch.range(0, self.numPairTasks-1).long();
+[Tue, 03 Sep 2019 11:45:29][Iter: 0][Ep: 0.00][R: -9.9450][Tr: 0.00 Te: 0.00]
+[Tue, 03 Sep 2019 11:46:58][Iter: 1000][Ep: 1000.00][R: -9.6695][Tr: 2.94 Te: 3.85]
+[Tue, 03 Sep 2019 11:48:27][Iter: 2000][Ep: 2000.00][R: -6.7606][Tr: 31.70 Te: 5.13]
+[Tue, 03 Sep 2019 11:49:55][Iter: 3000][Ep: 3000.00][R: -5.0745][Tr: 49.67 Te: 7.69]
+[Tue, 03 Sep 2019 11:51:24][Iter: 4000][Ep: 4000.00][R: -4.0433][Tr: 57.84 Te: 17.95]
+[Tue, 03 Sep 2019 11:52:51][Iter: 5000][Ep: 5000.00][R: -3.7115][Tr: 69.61 Te: 20.51]
+[Tue, 03 Sep 2019 11:54:18][Iter: 6000][Ep: 6000.00][R: -2.9936][Tr: 75.16 Te: 35.90]
+[Tue, 03 Sep 2019 11:55:47][Iter: 7000][Ep: 7000.00][R: -2.7219][Tr: 83.01 Te: 47.44]
+[Tue, 03 Sep 2019 11:57:14][Iter: 8000][Ep: 8000.00][R: -2.5820][Tr: 83.66 Te: 41.03]
+[Tue, 03 Sep 2019 11:58:40][Iter: 9000][Ep: 9000.00][R: -2.3672][Tr: 82.35 Te: 30.77]
+[Tue, 03 Sep 2019 12:00:09][Iter: 10000][Ep: 10000.00][R: -2.3628][Tr: 82.68 Te: 46.15]
+[Tue, 03 Sep 2019 12:01:37][Iter: 11000][Ep: 11000.00][R: -2.3176][Tr: 87.25 Te: 50.00]
+[Tue, 03 Sep 2019 12:03:05][Iter: 12000][Ep: 12000.00][R: -2.2272][Tr: 87.25 Te: 53.85]
+[Tue, 03 Sep 2019 12:04:31][Iter: 13000][Ep: 13000.00][R: -2.3500][Tr: 87.25 Te: 38.46]
+[Tue, 03 Sep 2019 12:05:59][Iter: 14000][Ep: 14000.00][R: -1.8901][Tr: 85.62 Te: 46.15]
+[Tue, 03 Sep 2019 12:07:27][Iter: 15000][Ep: 15000.00][R: -2.3756][Tr: 86.93 Te: 46.15]
+[Tue, 03 Sep 2019 12:08:55][Iter: 16000][Ep: 16000.00][R: -2.3549][Tr: 86.93 Te: 46.15]
+[Tue, 03 Sep 2019 12:10:23][Iter: 17000][Ep: 17000.00][R: -2.2772][Tr: 86.93 Te: 47.44]
+[Tue, 03 Sep 2019 12:11:52][Iter: 18000][Ep: 18000.00][R: -2.0187][Tr: 87.58 Te: 48.72]
+[Tue, 03 Sep 2019 12:13:19][Iter: 19000][Ep: 19000.00][R: -2.1005][Tr: 87.58 Te: 48.72]
+[Tue, 03 Sep 2019 12:14:48][Iter: 20000][Ep: 20000.00][R: -2.6299][Tr: 84.97 Te: 44.87]
+[Tue, 03 Sep 2019 12:16:16][Iter: 21000][Ep: 21000.00][R: -2.2546][Tr: 82.68 Te: 50.00]
+[Tue, 03 Sep 2019 12:17:43][Iter: 22000][Ep: 22000.00][R: -2.2585][Tr: 82.68 Te: 44.87]
+[Tue, 03 Sep 2019 12:19:11][Iter: 23000][Ep: 23000.00][R: -2.1383][Tr: 84.64 Te: 46.15]
+[Tue, 03 Sep 2019 12:20:40][Iter: 24000][Ep: 24000.00][R: -2.0721][Tr: 85.29 Te: 47.44]
+[Tue, 03 Sep 2019 12:22:07][Iter: 25000][Ep: 25000.00][R: -2.3313][Tr: 84.64 Te: 46.15]
+[Tue, 03 Sep 2019 12:23:33][Iter: 26000][Ep: 26000.00][R: -2.2342][Tr: 86.93 Te: 48.72]
+[Tue, 03 Sep 2019 12:25:00][Iter: 27000][Ep: 27000.00][R: -2.2297][Tr: 88.24 Te: 47.44]
+[Tue, 03 Sep 2019 12:26:26][Iter: 28000][Ep: 28000.00][R: -2.3097][Tr: 86.93 Te: 46.15]
+[Tue, 03 Sep 2019 12:27:53][Iter: 29000][Ep: 29000.00][R: -2.2355][Tr: 88.24 Te: 47.44]
+[Tue, 03 Sep 2019 12:29:20][Iter: 30000][Ep: 30000.00][R: -2.0498][Tr: 86.60 Te: 47.44]
+[Tue, 03 Sep 2019 12:30:47][Iter: 31000][Ep: 31000.00][R: -2.1170][Tr: 86.60 Te: 47.44]
+[Tue, 03 Sep 2019 12:32:13][Iter: 32000][Ep: 32000.00][R: -1.9672][Tr: 86.60 Te: 47.44]
+[Tue, 03 Sep 2019 12:33:40][Iter: 33000][Ep: 33000.00][R: -2.1269][Tr: 86.60 Te: 47.44]
+[Tue, 03 Sep 2019 12:35:06][Iter: 34000][Ep: 34000.00][R: -2.1164][Tr: 85.95 Te: 47.44]
+[Tue, 03 Sep 2019 12:36:33][Iter: 35000][Ep: 35000.00][R: -2.1837][Tr: 84.97 Te: 46.15]
+[Tue, 03 Sep 2019 12:38:00][Iter: 36000][Ep: 36000.00][R: -2.1169][Tr: 85.29 Te: 46.15]
+[Tue, 03 Sep 2019 12:39:26][Iter: 37000][Ep: 37000.00][R: -2.0669][Tr: 85.95 Te: 47.44]
+[Tue, 03 Sep 2019 12:40:53][Iter: 38000][Ep: 38000.00][R: -1.9224][Tr: 85.62 Te: 52.56]
+[Tue, 03 Sep 2019 12:42:19][Iter: 39000][Ep: 39000.00][R: -2.0540][Tr: 84.97 Te: 50.00]
+[Tue, 03 Sep 2019 12:43:47][Iter: 40000][Ep: 40000.00][R: -2.0745][Tr: 84.97 Te: 50.00]
+[Tue, 03 Sep 2019 12:45:13][Iter: 41000][Ep: 41000.00][R: -2.0060][Tr: 84.97 Te: 50.00]
+[Tue, 03 Sep 2019 12:46:39][Iter: 42000][Ep: 42000.00][R: -1.9662][Tr: 84.97 Te: 50.00]
+[Tue, 03 Sep 2019 12:48:06][Iter: 43000][Ep: 43000.00][R: -2.0633][Tr: 84.97 Te: 50.00]
+[Tue, 03 Sep 2019 12:49:33][Iter: 44000][Ep: 44000.00][R: -1.9893][Tr: 84.97 Te: 50.00]
+[Tue, 03 Sep 2019 12:50:59][Iter: 45000][Ep: 45000.00][R: -2.0393][Tr: 84.97 Te: 50.00]
+[Tue, 03 Sep 2019 12:52:26][Iter: 46000][Ep: 46000.00][R: -2.0555][Tr: 84.97 Te: 50.00]
+[Tue, 03 Sep 2019 12:53:52][Iter: 47000][Ep: 47000.00][R: -2.0474][Tr: 84.97 Te: 50.00]
+[Tue, 03 Sep 2019 12:55:19][Iter: 48000][Ep: 48000.00][R: -1.9898][Tr: 84.97 Te: 50.00]
+[Tue, 03 Sep 2019 12:56:45][Iter: 49000][Ep: 49000.00][R: -2.0484][Tr: 84.97 Te: 50.00]
+Saving : models/tasks_final_Tue-03-Sep-2019-12:58:11_150H_0.0100lr_False_4_3.pickle
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:69: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  self.rangeInds = torch.range(0, self.numInst['train']-1).long();
+Arguments:
+	   numRounds : 2
+	  hiddenSize : 150
+	 negFraction : 0.8
+	 imgFeatSize : 20
+	   batchSize : 1000
+	      useGPU : True
+	   qOutVocab : 3
+	     dataset : data/toy64_split_0.8.json
+	     rlScale : 100.0
+	learningRate : 0.01
+	   embedSize : 20
+	   numEpochs : 50000
+	        seed : 3
+	   aOutVocab : 4
+	    remember : False
+Answerer(
+  (inNet): Embedding(7, 20)
+  (outNet): Linear(in_features=150, out_features=4, bias=True)
+  (softmax): Softmax()
+  (imgNet): Embedding(12, 20)
+  (rnn): LSTMCell(80, 150)
+)
+Questioner(
+  (inNet): Embedding(16, 20)
+  (outNet): Linear(in_features=150, out_features=3, bias=True)
+  (softmax): Softmax()
+  (rnn): LSTMCell(20, 150)
+  (predictRNN): LSTMCell(20, 150)
+  (predictNet): Linear(in_features=150, out_features=12, bias=True)
+)
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:182: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  tasks = torch.range(0, self.numPairTasks-1).long();
+[Tue, 03 Sep 2019 12:58:17][Iter: 0][Ep: 0.00][R: -9.9340][Tr: 1.31 Te: 0.00]
+[Tue, 03 Sep 2019 12:59:44][Iter: 1000][Ep: 1000.00][R: -9.7216][Tr: 3.92 Te: 0.00]
+[Tue, 03 Sep 2019 13:01:10][Iter: 2000][Ep: 2000.00][R: -7.8191][Tr: 21.24 Te: 2.56]
+[Tue, 03 Sep 2019 13:02:36][Iter: 3000][Ep: 3000.00][R: -5.1859][Tr: 45.42 Te: 11.54]
+[Tue, 03 Sep 2019 13:04:02][Iter: 4000][Ep: 4000.00][R: -3.1268][Tr: 67.97 Te: 42.31]
+[Tue, 03 Sep 2019 13:05:21][Iter: 5000][Ep: 5000.00][R: -2.7918][Tr: 90.85 Te: 64.10]
+[Tue, 03 Sep 2019 13:06:33][Iter: 6000][Ep: 6000.00][R: -2.5033][Tr: 90.52 Te: 61.54]
+[Tue, 03 Sep 2019 13:07:44][Iter: 7000][Ep: 7000.00][R: -1.8931][Tr: 93.46 Te: 82.05]
+Saving : models/tasks_final_Tue-03-Sep-2019-13:08:42_150H_0.0100lr_False_4_3.pickle
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:69: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  self.rangeInds = torch.range(0, self.numInst['train']-1).long();
+Arguments:
+	   numRounds : 2
+	  hiddenSize : 150
+	 negFraction : 0.8
+	 imgFeatSize : 20
+	   batchSize : 1000
+	      useGPU : True
+	   qOutVocab : 3
+	     dataset : data/toy64_split_0.8.json
+	     rlScale : 100.0
+	learningRate : 0.01
+	   embedSize : 20
+	   numEpochs : 50000
+	        seed : 4
+	   aOutVocab : 4
+	    remember : False
+Answerer(
+  (inNet): Embedding(7, 20)
+  (outNet): Linear(in_features=150, out_features=4, bias=True)
+  (softmax): Softmax()
+  (imgNet): Embedding(12, 20)
+  (rnn): LSTMCell(80, 150)
+)
+Questioner(
+  (inNet): Embedding(16, 20)
+  (outNet): Linear(in_features=150, out_features=3, bias=True)
+  (softmax): Softmax()
+  (rnn): LSTMCell(20, 150)
+  (predictRNN): LSTMCell(20, 150)
+  (predictNet): Linear(in_features=150, out_features=12, bias=True)
+)
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:182: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  tasks = torch.range(0, self.numPairTasks-1).long();
+[Tue, 03 Sep 2019 13:08:47][Iter: 0][Ep: 0.00][R: -9.9340][Tr: 0.00 Te: 0.00]
+[Tue, 03 Sep 2019 13:09:59][Iter: 1000][Ep: 1000.00][R: -9.6262][Tr: 3.59 Te: 1.28]
+[Tue, 03 Sep 2019 13:11:12][Iter: 2000][Ep: 2000.00][R: -8.0586][Tr: 18.63 Te: 6.41]
+[Tue, 03 Sep 2019 13:12:24][Iter: 3000][Ep: 3000.00][R: -6.7059][Tr: 31.05 Te: 7.69]
+[Tue, 03 Sep 2019 13:13:36][Iter: 4000][Ep: 4000.00][R: -5.8212][Tr: 36.27 Te: 12.82]
+[Tue, 03 Sep 2019 13:14:48][Iter: 5000][Ep: 5000.00][R: -4.9847][Tr: 47.06 Te: 15.38]
+[Tue, 03 Sep 2019 13:16:01][Iter: 6000][Ep: 6000.00][R: -4.6059][Tr: 50.00 Te: 14.10]
+[Tue, 03 Sep 2019 13:17:13][Iter: 7000][Ep: 7000.00][R: -4.4099][Tr: 51.96 Te: 25.64]
+[Tue, 03 Sep 2019 13:18:26][Iter: 8000][Ep: 8000.00][R: -4.4099][Tr: 52.94 Te: 21.79]
+[Tue, 03 Sep 2019 13:19:39][Iter: 9000][Ep: 9000.00][R: -3.3038][Tr: 60.78 Te: 30.77]
+[Tue, 03 Sep 2019 13:20:52][Iter: 10000][Ep: 10000.00][R: -2.5172][Tr: 70.26 Te: 32.05]
+[Tue, 03 Sep 2019 13:22:05][Iter: 11000][Ep: 11000.00][R: -2.7189][Tr: 72.55 Te: 44.87]
+[Tue, 03 Sep 2019 13:23:17][Iter: 12000][Ep: 12000.00][R: -2.7502][Tr: 77.78 Te: 50.00]
+[Tue, 03 Sep 2019 13:24:29][Iter: 13000][Ep: 13000.00][R: -2.1991][Tr: 86.60 Te: 62.82]
+[Tue, 03 Sep 2019 13:25:41][Iter: 14000][Ep: 14000.00][R: -1.5536][Tr: 90.20 Te: 52.56]
+[Tue, 03 Sep 2019 13:26:53][Iter: 15000][Ep: 15000.00][R: -1.6095][Tr: 93.46 Te: 58.97]
+[Tue, 03 Sep 2019 13:28:04][Iter: 16000][Ep: 16000.00][R: -0.8306][Tr: 95.75 Te: 67.95]
+[Tue, 03 Sep 2019 13:29:16][Iter: 17000][Ep: 17000.00][R: -0.8645][Tr: 95.75 Te: 73.08]
+[Tue, 03 Sep 2019 13:30:28][Iter: 18000][Ep: 18000.00][R: -0.8117][Tr: 95.75 Te: 73.08]
+[Tue, 03 Sep 2019 13:31:41][Iter: 19000][Ep: 19000.00][R: -0.8544][Tr: 95.75 Te: 73.08]
+[Tue, 03 Sep 2019 13:32:54][Iter: 20000][Ep: 20000.00][R: -0.7878][Tr: 95.75 Te: 73.08]
+[Tue, 03 Sep 2019 13:34:06][Iter: 21000][Ep: 21000.00][R: -0.8212][Tr: 95.75 Te: 73.08]
+[Tue, 03 Sep 2019 13:35:17][Iter: 22000][Ep: 22000.00][R: -0.8276][Tr: 95.75 Te: 73.08]
+[Tue, 03 Sep 2019 13:36:30][Iter: 23000][Ep: 23000.00][R: -0.8517][Tr: 95.75 Te: 73.08]
+[Tue, 03 Sep 2019 13:37:43][Iter: 24000][Ep: 24000.00][R: -0.8247][Tr: 95.75 Te: 73.08]
+[Tue, 03 Sep 2019 13:38:55][Iter: 25000][Ep: 25000.00][R: -0.8142][Tr: 95.75 Te: 73.08]
+[Tue, 03 Sep 2019 13:40:08][Iter: 26000][Ep: 26000.00][R: -0.7994][Tr: 95.75 Te: 73.08]
+[Tue, 03 Sep 2019 13:41:21][Iter: 27000][Ep: 27000.00][R: -0.8490][Tr: 95.75 Te: 73.08]
+[Tue, 03 Sep 2019 13:42:34][Iter: 28000][Ep: 28000.00][R: -0.8691][Tr: 95.75 Te: 73.08]
+[Tue, 03 Sep 2019 13:43:46][Iter: 29000][Ep: 29000.00][R: -0.7992][Tr: 95.75 Te: 73.08]
+[Tue, 03 Sep 2019 13:45:00][Iter: 30000][Ep: 30000.00][R: -0.8677][Tr: 95.75 Te: 73.08]
+[Tue, 03 Sep 2019 13:46:13][Iter: 31000][Ep: 31000.00][R: -0.8293][Tr: 95.75 Te: 73.08]
+[Tue, 03 Sep 2019 13:47:26][Iter: 32000][Ep: 32000.00][R: -0.8275][Tr: 95.75 Te: 73.08]
+[Tue, 03 Sep 2019 13:48:39][Iter: 33000][Ep: 33000.00][R: -0.8501][Tr: 95.75 Te: 73.08]
+[Tue, 03 Sep 2019 13:49:52][Iter: 34000][Ep: 34000.00][R: -0.8013][Tr: 95.75 Te: 73.08]
+[Tue, 03 Sep 2019 13:51:04][Iter: 35000][Ep: 35000.00][R: -0.8155][Tr: 95.75 Te: 73.08]
+[Tue, 03 Sep 2019 13:52:17][Iter: 36000][Ep: 36000.00][R: -0.8345][Tr: 95.75 Te: 73.08]
+[Tue, 03 Sep 2019 13:53:30][Iter: 37000][Ep: 37000.00][R: -0.8489][Tr: 95.75 Te: 73.08]
+[Tue, 03 Sep 2019 13:54:43][Iter: 38000][Ep: 38000.00][R: -0.8083][Tr: 95.75 Te: 73.08]
+[Tue, 03 Sep 2019 13:55:56][Iter: 39000][Ep: 39000.00][R: -0.8335][Tr: 95.75 Te: 73.08]
+[Tue, 03 Sep 2019 13:57:10][Iter: 40000][Ep: 40000.00][R: -0.4517][Tr: 99.35 Te: 78.21]
+[Tue, 03 Sep 2019 13:58:24][Iter: 41000][Ep: 41000.00][R: -0.5022][Tr: 99.35 Te: 78.21]
+[Tue, 03 Sep 2019 13:59:37][Iter: 42000][Ep: 42000.00][R: -0.4484][Tr: 99.35 Te: 78.21]
+[Tue, 03 Sep 2019 14:00:52][Iter: 43000][Ep: 43000.00][R: -0.5036][Tr: 99.35 Te: 78.21]
+[Tue, 03 Sep 2019 14:02:05][Iter: 44000][Ep: 44000.00][R: -0.4446][Tr: 99.35 Te: 78.21]
+[Tue, 03 Sep 2019 14:03:18][Iter: 45000][Ep: 45000.00][R: -0.4628][Tr: 99.35 Te: 78.21]
+[Tue, 03 Sep 2019 14:04:32][Iter: 46000][Ep: 46000.00][R: -0.4511][Tr: 99.35 Te: 78.21]
+[Tue, 03 Sep 2019 14:05:45][Iter: 47000][Ep: 47000.00][R: -0.4585][Tr: 99.35 Te: 78.21]
+[Tue, 03 Sep 2019 14:06:58][Iter: 48000][Ep: 48000.00][R: -0.4872][Tr: 99.35 Te: 78.21]
+[Tue, 03 Sep 2019 14:08:11][Iter: 49000][Ep: 49000.00][R: -0.4853][Tr: 99.35 Te: 78.21]
+Saving : models/tasks_final_Tue-03-Sep-2019-14:09:25_150H_0.0100lr_False_4_3.pickle
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:69: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  self.rangeInds = torch.range(0, self.numInst['train']-1).long();
+Arguments:
+	   numRounds : 2
+	  hiddenSize : 150
+	 negFraction : 0.8
+	 imgFeatSize : 20
+	   batchSize : 1000
+	      useGPU : True
+	   qOutVocab : 3
+	     dataset : data/toy64_split_0.8.json
+	     rlScale : 100.0
+	learningRate : 0.01
+	   embedSize : 20
+	   numEpochs : 50000
+	        seed : 5
+	   aOutVocab : 4
+	    remember : False
+Answerer(
+  (inNet): Embedding(7, 20)
+  (outNet): Linear(in_features=150, out_features=4, bias=True)
+  (softmax): Softmax()
+  (imgNet): Embedding(12, 20)
+  (rnn): LSTMCell(80, 150)
+)
+Questioner(
+  (inNet): Embedding(16, 20)
+  (outNet): Linear(in_features=150, out_features=3, bias=True)
+  (softmax): Softmax()
+  (rnn): LSTMCell(20, 150)
+  (predictRNN): LSTMCell(20, 150)
+  (predictNet): Linear(in_features=150, out_features=12, bias=True)
+)
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:182: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  tasks = torch.range(0, self.numPairTasks-1).long();
+[Tue, 03 Sep 2019 14:09:30][Iter: 0][Ep: 0.00][R: -9.9010][Tr: 0.00 Te: 0.00]
+[Tue, 03 Sep 2019 14:10:43][Iter: 1000][Ep: 1000.00][R: -9.2981][Tr: 7.84 Te: 1.28]
+[Tue, 03 Sep 2019 14:11:55][Iter: 2000][Ep: 2000.00][R: -7.7348][Tr: 22.22 Te: 7.69]
+[Tue, 03 Sep 2019 14:13:09][Iter: 3000][Ep: 3000.00][R: -5.5502][Tr: 40.20 Te: 11.54]
+[Tue, 03 Sep 2019 14:14:22][Iter: 4000][Ep: 4000.00][R: -4.7497][Tr: 49.67 Te: 16.67]
+[Tue, 03 Sep 2019 14:15:36][Iter: 5000][Ep: 5000.00][R: -4.5023][Tr: 54.25 Te: 21.79]
+[Tue, 03 Sep 2019 14:16:50][Iter: 6000][Ep: 6000.00][R: -3.8392][Tr: 58.82 Te: 17.95]
+[Tue, 03 Sep 2019 14:18:02][Iter: 7000][Ep: 7000.00][R: -3.4653][Tr: 64.38 Te: 19.23]
+[Tue, 03 Sep 2019 14:19:16][Iter: 8000][Ep: 8000.00][R: -3.6193][Tr: 62.42 Te: 19.23]
+[Tue, 03 Sep 2019 14:20:29][Iter: 9000][Ep: 9000.00][R: -3.6772][Tr: 59.80 Te: 23.08]
+[Tue, 03 Sep 2019 14:21:42][Iter: 10000][Ep: 10000.00][R: -3.3238][Tr: 63.40 Te: 23.08]
+[Tue, 03 Sep 2019 14:22:55][Iter: 11000][Ep: 11000.00][R: -3.3216][Tr: 64.38 Te: 23.08]
+[Tue, 03 Sep 2019 14:24:07][Iter: 12000][Ep: 12000.00][R: -3.1867][Tr: 64.05 Te: 23.08]
+[Tue, 03 Sep 2019 14:25:20][Iter: 13000][Ep: 13000.00][R: -3.2414][Tr: 63.73 Te: 21.79]
+[Tue, 03 Sep 2019 14:26:32][Iter: 14000][Ep: 14000.00][R: -3.3800][Tr: 63.40 Te: 15.38]
+[Tue, 03 Sep 2019 14:27:41][Iter: 15000][Ep: 15000.00][R: -3.2704][Tr: 64.71 Te: 16.67]
+[Tue, 03 Sep 2019 14:28:49][Iter: 16000][Ep: 16000.00][R: -3.2447][Tr: 63.40 Te: 19.23]
+[Tue, 03 Sep 2019 14:29:57][Iter: 17000][Ep: 17000.00][R: -3.2534][Tr: 65.36 Te: 19.23]
+[Tue, 03 Sep 2019 14:31:05][Iter: 18000][Ep: 18000.00][R: -3.3497][Tr: 62.75 Te: 16.67]
+[Tue, 03 Sep 2019 14:32:12][Iter: 19000][Ep: 19000.00][R: -3.3579][Tr: 63.73 Te: 23.08]
+[Tue, 03 Sep 2019 14:33:22][Iter: 20000][Ep: 20000.00][R: -3.2494][Tr: 64.05 Te: 16.67]
+[Tue, 03 Sep 2019 14:34:32][Iter: 21000][Ep: 21000.00][R: -3.4922][Tr: 60.13 Te: 17.95]
+[Tue, 03 Sep 2019 14:35:42][Iter: 22000][Ep: 22000.00][R: -4.1149][Tr: 56.86 Te: 17.95]
+[Tue, 03 Sep 2019 14:36:50][Iter: 23000][Ep: 23000.00][R: -3.7211][Tr: 58.50 Te: 21.79]
+[Tue, 03 Sep 2019 14:37:59][Iter: 24000][Ep: 24000.00][R: -3.8444][Tr: 58.17 Te: 12.82]
+[Tue, 03 Sep 2019 14:39:09][Iter: 25000][Ep: 25000.00][R: -3.5535][Tr: 59.48 Te: 12.82]
+[Tue, 03 Sep 2019 14:40:18][Iter: 26000][Ep: 26000.00][R: -3.7060][Tr: 60.46 Te: 16.67]
+[Tue, 03 Sep 2019 14:41:28][Iter: 27000][Ep: 27000.00][R: -3.5267][Tr: 59.80 Te: 12.82]
+[Tue, 03 Sep 2019 14:42:40][Iter: 28000][Ep: 28000.00][R: -3.5940][Tr: 58.82 Te: 16.67]
+[Tue, 03 Sep 2019 14:43:51][Iter: 29000][Ep: 29000.00][R: -3.4699][Tr: 60.46 Te: 8.97]
+[Tue, 03 Sep 2019 14:45:04][Iter: 30000][Ep: 30000.00][R: -3.6636][Tr: 60.46 Te: 17.95]
+[Tue, 03 Sep 2019 14:46:13][Iter: 31000][Ep: 31000.00][R: -3.3607][Tr: 60.46 Te: 19.23]
+[Tue, 03 Sep 2019 14:47:24][Iter: 32000][Ep: 32000.00][R: -3.3551][Tr: 62.09 Te: 15.38]
+[Tue, 03 Sep 2019 14:48:34][Iter: 33000][Ep: 33000.00][R: -4.0074][Tr: 56.21 Te: 14.10]
+[Tue, 03 Sep 2019 14:49:44][Iter: 34000][Ep: 34000.00][R: -4.2274][Tr: 53.27 Te: 12.82]
+[Tue, 03 Sep 2019 14:50:53][Iter: 35000][Ep: 35000.00][R: -3.9091][Tr: 56.21 Te: 14.10]
+[Tue, 03 Sep 2019 14:52:04][Iter: 36000][Ep: 36000.00][R: -4.1758][Tr: 55.23 Te: 8.97]
+[Tue, 03 Sep 2019 14:53:18][Iter: 37000][Ep: 37000.00][R: -4.1267][Tr: 54.58 Te: 11.54]
+[Tue, 03 Sep 2019 14:54:28][Iter: 38000][Ep: 38000.00][R: -4.3355][Tr: 53.92 Te: 19.23]
+[Tue, 03 Sep 2019 14:55:41][Iter: 39000][Ep: 39000.00][R: -4.7158][Tr: 50.00 Te: 16.67]
+[Tue, 03 Sep 2019 14:56:55][Iter: 40000][Ep: 40000.00][R: -4.6466][Tr: 51.31 Te: 15.38]
+[Tue, 03 Sep 2019 14:58:08][Iter: 41000][Ep: 41000.00][R: -4.6235][Tr: 50.98 Te: 12.82]
+[Tue, 03 Sep 2019 14:59:20][Iter: 42000][Ep: 42000.00][R: -5.2746][Tr: 45.42 Te: 14.10]
+[Tue, 03 Sep 2019 15:00:32][Iter: 43000][Ep: 43000.00][R: -5.0973][Tr: 45.75 Te: 17.95]
+[Tue, 03 Sep 2019 15:01:45][Iter: 44000][Ep: 44000.00][R: -5.2667][Tr: 45.10 Te: 15.38]
+[Tue, 03 Sep 2019 15:02:58][Iter: 45000][Ep: 45000.00][R: -5.4839][Tr: 42.48 Te: 17.95]
+[Tue, 03 Sep 2019 15:04:11][Iter: 46000][Ep: 46000.00][R: -4.9433][Tr: 47.71 Te: 15.38]
+[Tue, 03 Sep 2019 15:05:23][Iter: 47000][Ep: 47000.00][R: -4.9334][Tr: 48.69 Te: 10.26]
+[Tue, 03 Sep 2019 15:06:37][Iter: 48000][Ep: 48000.00][R: -5.7484][Tr: 38.89 Te: 7.69]
+[Tue, 03 Sep 2019 15:07:50][Iter: 49000][Ep: 49000.00][R: -5.1365][Tr: 47.71 Te: 7.69]
+Saving : models/tasks_final_Tue-03-Sep-2019-15:09:03_150H_0.0100lr_False_4_3.pickle
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:69: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  self.rangeInds = torch.range(0, self.numInst['train']-1).long();
+Arguments:
+	   numRounds : 2
+	  hiddenSize : 150
+	 negFraction : 0.8
+	 imgFeatSize : 20
+	   batchSize : 1000
+	      useGPU : True
+	   qOutVocab : 3
+	     dataset : data/toy64_split_0.8.json
+	     rlScale : 100.0
+	learningRate : 0.01
+	   embedSize : 20
+	   numEpochs : 50000
+	        seed : 6
+	   aOutVocab : 4
+	    remember : False
+Answerer(
+  (inNet): Embedding(7, 20)
+  (outNet): Linear(in_features=150, out_features=4, bias=True)
+  (softmax): Softmax()
+  (imgNet): Embedding(12, 20)
+  (rnn): LSTMCell(80, 150)
+)
+Questioner(
+  (inNet): Embedding(16, 20)
+  (outNet): Linear(in_features=150, out_features=3, bias=True)
+  (softmax): Softmax()
+  (rnn): LSTMCell(20, 150)
+  (predictRNN): LSTMCell(20, 150)
+  (predictNet): Linear(in_features=150, out_features=12, bias=True)
+)
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:182: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  tasks = torch.range(0, self.numPairTasks-1).long();
+[Tue, 03 Sep 2019 15:09:07][Iter: 0][Ep: 0.00][R: -9.9560][Tr: 0.00 Te: 0.00]
+[Tue, 03 Sep 2019 15:10:20][Iter: 1000][Ep: 1000.00][R: -9.6439][Tr: 3.27 Te: 0.00]
+[Tue, 03 Sep 2019 15:11:33][Iter: 2000][Ep: 2000.00][R: -6.8067][Tr: 31.37 Te: 11.54]
+[Tue, 03 Sep 2019 15:12:46][Iter: 3000][Ep: 3000.00][R: -4.8496][Tr: 50.00 Te: 21.79]
+[Tue, 03 Sep 2019 15:13:56][Iter: 4000][Ep: 4000.00][R: -4.2407][Tr: 55.23 Te: 20.51]
+[Tue, 03 Sep 2019 15:15:08][Iter: 5000][Ep: 5000.00][R: -4.0768][Tr: 54.90 Te: 12.82]
+[Tue, 03 Sep 2019 15:16:22][Iter: 6000][Ep: 6000.00][R: -3.9587][Tr: 58.82 Te: 15.38]
+[Tue, 03 Sep 2019 15:17:36][Iter: 7000][Ep: 7000.00][R: -4.0791][Tr: 56.54 Te: 15.38]
+[Tue, 03 Sep 2019 15:18:50][Iter: 8000][Ep: 8000.00][R: -3.8909][Tr: 62.09 Te: 7.69]
+[Tue, 03 Sep 2019 15:20:03][Iter: 9000][Ep: 9000.00][R: -4.1471][Tr: 60.78 Te: 6.41]
+[Tue, 03 Sep 2019 15:21:16][Iter: 10000][Ep: 10000.00][R: -3.9287][Tr: 60.13 Te: 8.97]
+[Tue, 03 Sep 2019 15:22:29][Iter: 11000][Ep: 11000.00][R: -3.9546][Tr: 63.40 Te: 10.26]
+[Tue, 03 Sep 2019 15:23:43][Iter: 12000][Ep: 12000.00][R: -3.9055][Tr: 64.05 Te: 7.69]
+[Tue, 03 Sep 2019 15:24:57][Iter: 13000][Ep: 13000.00][R: -3.5809][Tr: 66.01 Te: 12.82]
+[Tue, 03 Sep 2019 15:26:10][Iter: 14000][Ep: 14000.00][R: -3.4810][Tr: 63.73 Te: 14.10]
+[Tue, 03 Sep 2019 15:27:24][Iter: 15000][Ep: 15000.00][R: -3.4530][Tr: 62.42 Te: 7.69]
+[Tue, 03 Sep 2019 15:28:36][Iter: 16000][Ep: 16000.00][R: -3.5704][Tr: 66.67 Te: 11.54]
+[Tue, 03 Sep 2019 15:29:49][Iter: 17000][Ep: 17000.00][R: -3.7307][Tr: 61.44 Te: 11.54]
+[Tue, 03 Sep 2019 15:31:03][Iter: 18000][Ep: 18000.00][R: -3.6287][Tr: 66.01 Te: 10.26]
+[Tue, 03 Sep 2019 15:32:16][Iter: 19000][Ep: 19000.00][R: -3.9304][Tr: 65.69 Te: 8.97]
+[Tue, 03 Sep 2019 15:33:31][Iter: 20000][Ep: 20000.00][R: -3.5833][Tr: 64.38 Te: 16.67]
+[Tue, 03 Sep 2019 15:34:44][Iter: 21000][Ep: 21000.00][R: -3.5989][Tr: 64.38 Te: 10.26]
+[Tue, 03 Sep 2019 15:35:57][Iter: 22000][Ep: 22000.00][R: -3.5972][Tr: 66.67 Te: 12.82]
+[Tue, 03 Sep 2019 15:37:10][Iter: 23000][Ep: 23000.00][R: -3.9507][Tr: 65.69 Te: 12.82]
+[Tue, 03 Sep 2019 15:38:25][Iter: 24000][Ep: 24000.00][R: -3.9081][Tr: 61.44 Te: 11.54]
+[Tue, 03 Sep 2019 15:39:38][Iter: 25000][Ep: 25000.00][R: -3.8281][Tr: 58.82 Te: 11.54]
+[Tue, 03 Sep 2019 15:40:52][Iter: 26000][Ep: 26000.00][R: -3.2868][Tr: 64.71 Te: 14.10]
+[Tue, 03 Sep 2019 15:42:06][Iter: 27000][Ep: 27000.00][R: -3.3268][Tr: 65.36 Te: 20.51]
+[Tue, 03 Sep 2019 15:43:19][Iter: 28000][Ep: 28000.00][R: -3.4792][Tr: 65.36 Te: 16.67]
+[Tue, 03 Sep 2019 15:44:33][Iter: 29000][Ep: 29000.00][R: -3.3367][Tr: 64.71 Te: 15.38]
+[Tue, 03 Sep 2019 15:45:46][Iter: 30000][Ep: 30000.00][R: -3.0145][Tr: 70.26 Te: 15.38]
+[Tue, 03 Sep 2019 15:47:00][Iter: 31000][Ep: 31000.00][R: -3.1974][Tr: 64.71 Te: 16.67]
+[Tue, 03 Sep 2019 15:48:13][Iter: 32000][Ep: 32000.00][R: -3.0330][Tr: 67.65 Te: 8.97]
+[Tue, 03 Sep 2019 15:49:26][Iter: 33000][Ep: 33000.00][R: -3.0451][Tr: 67.97 Te: 14.10]
+[Tue, 03 Sep 2019 15:50:39][Iter: 34000][Ep: 34000.00][R: -2.9703][Tr: 66.99 Te: 8.97]
+[Tue, 03 Sep 2019 15:51:52][Iter: 35000][Ep: 35000.00][R: -3.5490][Tr: 63.07 Te: 12.82]
+[Tue, 03 Sep 2019 15:53:06][Iter: 36000][Ep: 36000.00][R: -3.4242][Tr: 63.40 Te: 16.67]
+[Tue, 03 Sep 2019 15:54:19][Iter: 37000][Ep: 37000.00][R: -3.9605][Tr: 61.76 Te: 14.10]
+[Tue, 03 Sep 2019 15:55:32][Iter: 38000][Ep: 38000.00][R: -3.3859][Tr: 64.05 Te: 16.67]
+[Tue, 03 Sep 2019 15:56:46][Iter: 39000][Ep: 39000.00][R: -3.3350][Tr: 64.38 Te: 15.38]
+[Tue, 03 Sep 2019 15:57:57][Iter: 40000][Ep: 40000.00][R: -3.2444][Tr: 69.93 Te: 19.23]
+[Tue, 03 Sep 2019 15:59:12][Iter: 41000][Ep: 41000.00][R: -2.9401][Tr: 69.61 Te: 20.51]
+[Tue, 03 Sep 2019 16:00:25][Iter: 42000][Ep: 42000.00][R: -3.4082][Tr: 66.67 Te: 16.67]
+[Tue, 03 Sep 2019 16:01:40][Iter: 43000][Ep: 43000.00][R: -3.1275][Tr: 66.34 Te: 21.79]
+[Tue, 03 Sep 2019 16:02:53][Iter: 44000][Ep: 44000.00][R: -3.1460][Tr: 68.95 Te: 25.64]
+[Tue, 03 Sep 2019 16:04:08][Iter: 45000][Ep: 45000.00][R: -3.0008][Tr: 69.61 Te: 25.64]
+[Tue, 03 Sep 2019 16:05:21][Iter: 46000][Ep: 46000.00][R: -3.7116][Tr: 59.15 Te: 17.95]
+[Tue, 03 Sep 2019 16:06:34][Iter: 47000][Ep: 47000.00][R: -3.6645][Tr: 60.13 Te: 21.79]
+[Tue, 03 Sep 2019 16:07:46][Iter: 48000][Ep: 48000.00][R: -3.4557][Tr: 61.76 Te: 15.38]
+[Tue, 03 Sep 2019 16:08:59][Iter: 49000][Ep: 49000.00][R: -3.5302][Tr: 60.78 Te: 28.21]
+Saving : models/tasks_final_Tue-03-Sep-2019-16:10:11_150H_0.0100lr_False_4_3.pickle
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:69: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  self.rangeInds = torch.range(0, self.numInst['train']-1).long();
+Arguments:
+	   numRounds : 2
+	  hiddenSize : 150
+	 negFraction : 0.8
+	 imgFeatSize : 20
+	   batchSize : 1000
+	      useGPU : True
+	   qOutVocab : 3
+	     dataset : data/toy64_split_0.8.json
+	     rlScale : 100.0
+	learningRate : 0.01
+	   embedSize : 20
+	   numEpochs : 50000
+	        seed : 7
+	   aOutVocab : 4
+	    remember : False
+Answerer(
+  (inNet): Embedding(7, 20)
+  (outNet): Linear(in_features=150, out_features=4, bias=True)
+  (softmax): Softmax()
+  (imgNet): Embedding(12, 20)
+  (rnn): LSTMCell(80, 150)
+)
+Questioner(
+  (inNet): Embedding(16, 20)
+  (outNet): Linear(in_features=150, out_features=3, bias=True)
+  (softmax): Softmax()
+  (rnn): LSTMCell(20, 150)
+  (predictRNN): LSTMCell(20, 150)
+  (predictNet): Linear(in_features=150, out_features=12, bias=True)
+)
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:182: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  tasks = torch.range(0, self.numPairTasks-1).long();
+[Tue, 03 Sep 2019 16:10:16][Iter: 0][Ep: 0.00][R: -9.9230][Tr: 0.00 Te: 0.00]
+[Tue, 03 Sep 2019 16:11:29][Iter: 1000][Ep: 1000.00][R: -9.0389][Tr: 10.13 Te: 1.28]
+[Tue, 03 Sep 2019 16:12:43][Iter: 2000][Ep: 2000.00][R: -5.6502][Tr: 41.18 Te: 8.97]
+[Tue, 03 Sep 2019 16:13:56][Iter: 3000][Ep: 3000.00][R: -4.5909][Tr: 50.00 Te: 15.38]
+[Tue, 03 Sep 2019 16:15:09][Iter: 4000][Ep: 4000.00][R: -3.9583][Tr: 57.84 Te: 15.38]
+[Tue, 03 Sep 2019 16:16:23][Iter: 5000][Ep: 5000.00][R: -3.9350][Tr: 59.80 Te: 14.10]
+[Tue, 03 Sep 2019 16:17:36][Iter: 6000][Ep: 6000.00][R: -3.6792][Tr: 62.75 Te: 10.26]
+[Tue, 03 Sep 2019 16:18:50][Iter: 7000][Ep: 7000.00][R: -3.9331][Tr: 60.13 Te: 16.67]
+[Tue, 03 Sep 2019 16:20:04][Iter: 8000][Ep: 8000.00][R: -3.7730][Tr: 62.42 Te: 12.82]
+[Tue, 03 Sep 2019 16:21:18][Iter: 9000][Ep: 9000.00][R: -3.7005][Tr: 61.76 Te: 16.67]
+[Tue, 03 Sep 2019 16:22:32][Iter: 10000][Ep: 10000.00][R: -3.7025][Tr: 63.40 Te: 10.26]
+[Tue, 03 Sep 2019 16:23:46][Iter: 11000][Ep: 11000.00][R: -3.5811][Tr: 63.40 Te: 5.13]
+[Tue, 03 Sep 2019 16:24:59][Iter: 12000][Ep: 12000.00][R: -3.5768][Tr: 64.38 Te: 6.41]
+[Tue, 03 Sep 2019 16:25:44][Iter: 13000][Ep: 13000.00][R: -3.5270][Tr: 65.03 Te: 16.67]
+[Tue, 03 Sep 2019 16:26:24][Iter: 14000][Ep: 14000.00][R: -3.6521][Tr: 62.75 Te: 11.54]
+[Tue, 03 Sep 2019 16:27:03][Iter: 15000][Ep: 15000.00][R: -3.8239][Tr: 61.76 Te: 7.69]
+[Tue, 03 Sep 2019 16:27:43][Iter: 16000][Ep: 16000.00][R: -3.6407][Tr: 66.67 Te: 8.97]
+[Tue, 03 Sep 2019 16:28:23][Iter: 17000][Ep: 17000.00][R: -3.2839][Tr: 66.99 Te: 8.97]
+[Tue, 03 Sep 2019 16:29:02][Iter: 18000][Ep: 18000.00][R: -3.2110][Tr: 65.36 Te: 20.51]
+[Tue, 03 Sep 2019 16:29:42][Iter: 19000][Ep: 19000.00][R: -3.7401][Tr: 62.42 Te: 11.54]
+[Tue, 03 Sep 2019 16:30:21][Iter: 20000][Ep: 20000.00][R: -3.6513][Tr: 65.03 Te: 10.26]
+[Tue, 03 Sep 2019 16:31:01][Iter: 21000][Ep: 21000.00][R: -3.8615][Tr: 63.07 Te: 11.54]
+[Tue, 03 Sep 2019 16:31:41][Iter: 22000][Ep: 22000.00][R: -3.5085][Tr: 66.34 Te: 20.51]
+[Tue, 03 Sep 2019 16:32:20][Iter: 23000][Ep: 23000.00][R: -3.5575][Tr: 64.05 Te: 14.10]
+[Tue, 03 Sep 2019 16:33:00][Iter: 24000][Ep: 24000.00][R: -3.8752][Tr: 63.07 Te: 12.82]
+[Tue, 03 Sep 2019 16:33:40][Iter: 25000][Ep: 25000.00][R: -3.6192][Tr: 64.38 Te: 15.38]
+[Tue, 03 Sep 2019 16:34:19][Iter: 26000][Ep: 26000.00][R: -3.5610][Tr: 64.38 Te: 11.54]
+[Tue, 03 Sep 2019 16:34:59][Iter: 27000][Ep: 27000.00][R: -3.9538][Tr: 60.13 Te: 24.36]
+[Tue, 03 Sep 2019 16:35:39][Iter: 28000][Ep: 28000.00][R: -3.5073][Tr: 62.75 Te: 20.51]
+[Tue, 03 Sep 2019 16:36:18][Iter: 29000][Ep: 29000.00][R: -3.4903][Tr: 65.03 Te: 14.10]
+[Tue, 03 Sep 2019 16:36:58][Iter: 30000][Ep: 30000.00][R: -3.8794][Tr: 62.09 Te: 7.69]
+[Tue, 03 Sep 2019 16:37:38][Iter: 31000][Ep: 31000.00][R: -3.8024][Tr: 63.40 Te: 7.69]
+[Tue, 03 Sep 2019 16:38:17][Iter: 32000][Ep: 32000.00][R: -3.7124][Tr: 62.75 Te: 10.26]
+[Tue, 03 Sep 2019 16:38:57][Iter: 33000][Ep: 33000.00][R: -3.6600][Tr: 64.71 Te: 12.82]
+[Tue, 03 Sep 2019 16:39:36][Iter: 34000][Ep: 34000.00][R: -3.8527][Tr: 63.40 Te: 12.82]
+[Tue, 03 Sep 2019 16:40:16][Iter: 35000][Ep: 35000.00][R: -3.8718][Tr: 62.75 Te: 14.10]
+[Tue, 03 Sep 2019 16:40:55][Iter: 36000][Ep: 36000.00][R: -3.6918][Tr: 65.36 Te: 10.26]
+[Tue, 03 Sep 2019 16:41:35][Iter: 37000][Ep: 37000.00][R: -3.7307][Tr: 65.03 Te: 14.10]
+[Tue, 03 Sep 2019 16:42:14][Iter: 38000][Ep: 38000.00][R: -4.0834][Tr: 58.17 Te: 11.54]
+[Tue, 03 Sep 2019 16:42:53][Iter: 39000][Ep: 39000.00][R: -4.0373][Tr: 58.82 Te: 14.10]
+[Tue, 03 Sep 2019 16:43:34][Iter: 40000][Ep: 40000.00][R: -3.9776][Tr: 54.25 Te: 10.26]
+[Tue, 03 Sep 2019 16:44:13][Iter: 41000][Ep: 41000.00][R: -3.9706][Tr: 58.82 Te: 10.26]
+[Tue, 03 Sep 2019 16:44:52][Iter: 42000][Ep: 42000.00][R: -3.9955][Tr: 59.48 Te: 3.85]
+[Tue, 03 Sep 2019 16:45:32][Iter: 43000][Ep: 43000.00][R: -4.5816][Tr: 55.23 Te: 3.85]
+[Tue, 03 Sep 2019 16:46:11][Iter: 44000][Ep: 44000.00][R: -4.3401][Tr: 60.13 Te: 5.13]
+[Tue, 03 Sep 2019 16:46:51][Iter: 45000][Ep: 45000.00][R: -4.0075][Tr: 58.50 Te: 5.13]
+[Tue, 03 Sep 2019 16:47:30][Iter: 46000][Ep: 46000.00][R: -4.5423][Tr: 52.61 Te: 8.97]
+[Tue, 03 Sep 2019 16:48:10][Iter: 47000][Ep: 47000.00][R: -4.3354][Tr: 55.56 Te: 10.26]
+[Tue, 03 Sep 2019 16:48:50][Iter: 48000][Ep: 48000.00][R: -4.2652][Tr: 57.84 Te: 11.54]
+[Tue, 03 Sep 2019 16:49:29][Iter: 49000][Ep: 49000.00][R: -4.3627][Tr: 59.48 Te: 15.38]
+Saving : models/tasks_final_Tue-03-Sep-2019-16:50:09_150H_0.0100lr_False_4_3.pickle
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:69: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  self.rangeInds = torch.range(0, self.numInst['train']-1).long();
+Arguments:
+	   numRounds : 2
+	  hiddenSize : 150
+	 negFraction : 0.8
+	 imgFeatSize : 20
+	   batchSize : 1000
+	      useGPU : True
+	   qOutVocab : 3
+	     dataset : data/toy64_split_0.8.json
+	     rlScale : 100.0
+	learningRate : 0.01
+	   embedSize : 20
+	   numEpochs : 50000
+	        seed : 8
+	   aOutVocab : 4
+	    remember : False
+Answerer(
+  (inNet): Embedding(7, 20)
+  (outNet): Linear(in_features=150, out_features=4, bias=True)
+  (softmax): Softmax()
+  (imgNet): Embedding(12, 20)
+  (rnn): LSTMCell(80, 150)
+)
+Questioner(
+  (inNet): Embedding(16, 20)
+  (outNet): Linear(in_features=150, out_features=3, bias=True)
+  (softmax): Softmax()
+  (rnn): LSTMCell(20, 150)
+  (predictRNN): LSTMCell(20, 150)
+  (predictNet): Linear(in_features=150, out_features=12, bias=True)
+)
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:182: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  tasks = torch.range(0, self.numPairTasks-1).long();
+[Tue, 03 Sep 2019 16:50:13][Iter: 0][Ep: 0.00][R: -9.8900][Tr: 0.00 Te: 0.00]
+[Tue, 03 Sep 2019 16:50:53][Iter: 1000][Ep: 1000.00][R: -9.8104][Tr: 2.61 Te: 0.00]
+[Tue, 03 Sep 2019 16:51:33][Iter: 2000][Ep: 2000.00][R: -8.8036][Tr: 10.78 Te: 1.28]
+[Tue, 03 Sep 2019 16:52:12][Iter: 3000][Ep: 3000.00][R: -6.7907][Tr: 31.37 Te: 5.13]
+[Tue, 03 Sep 2019 16:52:52][Iter: 4000][Ep: 4000.00][R: -4.6337][Tr: 51.31 Te: 15.38]
+[Tue, 03 Sep 2019 16:53:32][Iter: 5000][Ep: 5000.00][R: -4.2354][Tr: 54.90 Te: 11.54]
+[Tue, 03 Sep 2019 16:54:12][Iter: 6000][Ep: 6000.00][R: -4.1236][Tr: 56.21 Te: 12.82]
+[Tue, 03 Sep 2019 16:54:52][Iter: 7000][Ep: 7000.00][R: -3.9715][Tr: 59.48 Te: 14.10]
+[Tue, 03 Sep 2019 16:55:32][Iter: 8000][Ep: 8000.00][R: -3.8518][Tr: 57.84 Te: 11.54]
+[Tue, 03 Sep 2019 16:56:11][Iter: 9000][Ep: 9000.00][R: -3.6652][Tr: 60.46 Te: 11.54]
+[Tue, 03 Sep 2019 16:56:52][Iter: 10000][Ep: 10000.00][R: -3.7323][Tr: 58.82 Te: 14.10]
+[Tue, 03 Sep 2019 16:57:32][Iter: 11000][Ep: 11000.00][R: -3.7244][Tr: 59.80 Te: 8.97]
+[Tue, 03 Sep 2019 16:58:11][Iter: 12000][Ep: 12000.00][R: -3.7418][Tr: 58.17 Te: 11.54]
+[Tue, 03 Sep 2019 16:58:51][Iter: 13000][Ep: 13000.00][R: -3.9139][Tr: 58.17 Te: 8.97]
+[Tue, 03 Sep 2019 16:59:31][Iter: 14000][Ep: 14000.00][R: -3.8750][Tr: 59.15 Te: 11.54]
+[Tue, 03 Sep 2019 17:00:10][Iter: 15000][Ep: 15000.00][R: -3.9144][Tr: 57.19 Te: 14.10]
+[Tue, 03 Sep 2019 17:00:50][Iter: 16000][Ep: 16000.00][R: -4.2606][Tr: 58.82 Te: 14.10]
+[Tue, 03 Sep 2019 17:01:30][Iter: 17000][Ep: 17000.00][R: -4.1048][Tr: 58.17 Te: 8.97]
+[Tue, 03 Sep 2019 17:02:10][Iter: 18000][Ep: 18000.00][R: -3.9366][Tr: 56.54 Te: 16.67]
+[Tue, 03 Sep 2019 17:02:49][Iter: 19000][Ep: 19000.00][R: -3.7653][Tr: 60.13 Te: 15.38]
+[Tue, 03 Sep 2019 17:03:30][Iter: 20000][Ep: 20000.00][R: -3.9013][Tr: 59.15 Te: 11.54]
+[Tue, 03 Sep 2019 17:04:10][Iter: 21000][Ep: 21000.00][R: -3.9884][Tr: 57.52 Te: 10.26]
+[Tue, 03 Sep 2019 17:04:49][Iter: 22000][Ep: 22000.00][R: -3.9102][Tr: 56.86 Te: 12.82]
+[Tue, 03 Sep 2019 17:05:29][Iter: 23000][Ep: 23000.00][R: -3.8272][Tr: 59.80 Te: 10.26]
+[Tue, 03 Sep 2019 17:06:09][Iter: 24000][Ep: 24000.00][R: -3.9957][Tr: 60.13 Te: 10.26]
+[Tue, 03 Sep 2019 17:06:49][Iter: 25000][Ep: 25000.00][R: -3.7568][Tr: 57.19 Te: 17.95]
+[Tue, 03 Sep 2019 17:07:29][Iter: 26000][Ep: 26000.00][R: -3.9541][Tr: 58.50 Te: 12.82]
+[Tue, 03 Sep 2019 17:08:09][Iter: 27000][Ep: 27000.00][R: -4.0065][Tr: 58.50 Te: 8.97]
+[Tue, 03 Sep 2019 17:08:48][Iter: 28000][Ep: 28000.00][R: -3.9389][Tr: 60.46 Te: 5.13]
+[Tue, 03 Sep 2019 17:09:28][Iter: 29000][Ep: 29000.00][R: -4.4738][Tr: 52.29 Te: 7.69]
+[Tue, 03 Sep 2019 17:10:08][Iter: 30000][Ep: 30000.00][R: -3.9280][Tr: 59.15 Te: 5.13]
+[Tue, 03 Sep 2019 17:10:48][Iter: 31000][Ep: 31000.00][R: -3.8887][Tr: 59.15 Te: 6.41]
+[Tue, 03 Sep 2019 17:11:28][Iter: 32000][Ep: 32000.00][R: -4.2011][Tr: 58.82 Te: 10.26]
+[Tue, 03 Sep 2019 17:12:07][Iter: 33000][Ep: 33000.00][R: -4.2056][Tr: 59.15 Te: 3.85]
+[Tue, 03 Sep 2019 17:12:47][Iter: 34000][Ep: 34000.00][R: -3.8859][Tr: 59.15 Te: 5.13]
+[Tue, 03 Sep 2019 17:13:27][Iter: 35000][Ep: 35000.00][R: -4.0700][Tr: 59.80 Te: 6.41]
+[Tue, 03 Sep 2019 17:14:06][Iter: 36000][Ep: 36000.00][R: -3.8580][Tr: 59.48 Te: 8.97]
+[Tue, 03 Sep 2019 17:14:46][Iter: 37000][Ep: 37000.00][R: -3.8160][Tr: 60.78 Te: 2.56]
+[Tue, 03 Sep 2019 17:15:26][Iter: 38000][Ep: 38000.00][R: -4.5005][Tr: 51.96 Te: 1.28]
+[Tue, 03 Sep 2019 17:16:05][Iter: 39000][Ep: 39000.00][R: -4.4952][Tr: 50.33 Te: 7.69]
+[Tue, 03 Sep 2019 17:16:45][Iter: 40000][Ep: 40000.00][R: -4.3295][Tr: 55.23 Te: 5.13]
+[Tue, 03 Sep 2019 17:17:25][Iter: 41000][Ep: 41000.00][R: -4.5503][Tr: 51.96 Te: 7.69]
+[Tue, 03 Sep 2019 17:18:05][Iter: 42000][Ep: 42000.00][R: -4.2696][Tr: 54.25 Te: 5.13]
+[Tue, 03 Sep 2019 17:18:44][Iter: 43000][Ep: 43000.00][R: -4.7896][Tr: 50.00 Te: 5.13]
+[Tue, 03 Sep 2019 17:19:23][Iter: 44000][Ep: 44000.00][R: -4.3445][Tr: 53.59 Te: 5.13]
+[Tue, 03 Sep 2019 17:20:02][Iter: 45000][Ep: 45000.00][R: -4.3699][Tr: 52.61 Te: 10.26]
+[Tue, 03 Sep 2019 17:20:41][Iter: 46000][Ep: 46000.00][R: -4.8778][Tr: 49.35 Te: 11.54]
+[Tue, 03 Sep 2019 17:21:20][Iter: 47000][Ep: 47000.00][R: -4.6003][Tr: 51.31 Te: 6.41]
+[Tue, 03 Sep 2019 17:21:59][Iter: 48000][Ep: 48000.00][R: -4.5727][Tr: 50.65 Te: 12.82]
+[Tue, 03 Sep 2019 17:22:38][Iter: 49000][Ep: 49000.00][R: -4.3828][Tr: 53.59 Te: 12.82]
+Saving : models/tasks_final_Tue-03-Sep-2019-17:23:16_150H_0.0100lr_False_4_3.pickle
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:69: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  self.rangeInds = torch.range(0, self.numInst['train']-1).long();
+Arguments:
+	   numRounds : 2
+	  hiddenSize : 150
+	 negFraction : 0.8
+	 imgFeatSize : 20
+	   batchSize : 1000
+	      useGPU : True
+	   qOutVocab : 3
+	     dataset : data/toy64_split_0.8.json
+	     rlScale : 100.0
+	learningRate : 0.01
+	   embedSize : 20
+	   numEpochs : 50000
+	        seed : 9
+	   aOutVocab : 4
+	    remember : False
+Answerer(
+  (inNet): Embedding(7, 20)
+  (outNet): Linear(in_features=150, out_features=4, bias=True)
+  (softmax): Softmax()
+  (imgNet): Embedding(12, 20)
+  (rnn): LSTMCell(80, 150)
+)
+Questioner(
+  (inNet): Embedding(16, 20)
+  (outNet): Linear(in_features=150, out_features=3, bias=True)
+  (softmax): Softmax()
+  (rnn): LSTMCell(20, 150)
+  (predictRNN): LSTMCell(20, 150)
+  (predictNet): Linear(in_features=150, out_features=12, bias=True)
+)
+/media/bighdd8/paul/emergent_language/old/lang-emerge/dataloader.py:182: UserWarning: torch.range is deprecated in favor of torch.arange and will be removed in 0.5. Note that arange generates values in [start; end), not [start; end].
+  tasks = torch.range(0, self.numPairTasks-1).long();
+[Tue, 03 Sep 2019 17:23:20][Iter: 0][Ep: 0.00][R: -9.9670][Tr: 0.00 Te: 0.00]
+[Tue, 03 Sep 2019 17:23:59][Iter: 1000][Ep: 1000.00][R: -9.6699][Tr: 3.27 Te: 1.28]
+[Tue, 03 Sep 2019 17:24:37][Iter: 2000][Ep: 2000.00][R: -6.8968][Tr: 30.39 Te: 15.38]
+[Tue, 03 Sep 2019 17:25:14][Iter: 3000][Ep: 3000.00][R: -4.8774][Tr: 48.04 Te: 11.54]
+[Tue, 03 Sep 2019 17:25:52][Iter: 4000][Ep: 4000.00][R: -4.2557][Tr: 56.21 Te: 11.54]
+[Tue, 03 Sep 2019 17:26:29][Iter: 5000][Ep: 5000.00][R: -4.1405][Tr: 56.54 Te: 16.67]
+[Tue, 03 Sep 2019 17:27:06][Iter: 6000][Ep: 6000.00][R: -3.7181][Tr: 58.82 Te: 20.51]
+[Tue, 03 Sep 2019 17:27:43][Iter: 7000][Ep: 7000.00][R: -3.5112][Tr: 61.44 Te: 23.08]
+[Tue, 03 Sep 2019 17:28:20][Iter: 8000][Ep: 8000.00][R: -3.2401][Tr: 62.09 Te: 25.64]
+[Tue, 03 Sep 2019 17:28:58][Iter: 9000][Ep: 9000.00][R: -2.5887][Tr: 69.61 Te: 30.77]
+[Tue, 03 Sep 2019 17:29:36][Iter: 10000][Ep: 10000.00][R: -2.7027][Tr: 66.01 Te: 37.18]
+[Tue, 03 Sep 2019 17:30:13][Iter: 11000][Ep: 11000.00][R: -2.3033][Tr: 71.90 Te: 32.05]
+[Tue, 03 Sep 2019 17:30:50][Iter: 12000][Ep: 12000.00][R: -2.3589][Tr: 71.24 Te: 29.49]
+[Tue, 03 Sep 2019 17:31:27][Iter: 13000][Ep: 13000.00][R: -2.3300][Tr: 72.55 Te: 25.64]
+[Tue, 03 Sep 2019 17:32:05][Iter: 14000][Ep: 14000.00][R: -2.2877][Tr: 70.59 Te: 26.92]
+[Tue, 03 Sep 2019 17:32:42][Iter: 15000][Ep: 15000.00][R: -2.2862][Tr: 70.26 Te: 34.62]
+[Tue, 03 Sep 2019 17:33:19][Iter: 16000][Ep: 16000.00][R: -2.3949][Tr: 69.28 Te: 43.59]
+[Tue, 03 Sep 2019 17:33:56][Iter: 17000][Ep: 17000.00][R: -2.0904][Tr: 71.90 Te: 42.31]
+[Tue, 03 Sep 2019 17:34:33][Iter: 18000][Ep: 18000.00][R: -2.9862][Tr: 63.73 Te: 32.05]
+[Tue, 03 Sep 2019 17:35:11][Iter: 19000][Ep: 19000.00][R: -2.2469][Tr: 70.92 Te: 42.31]
+[Tue, 03 Sep 2019 17:35:49][Iter: 20000][Ep: 20000.00][R: -2.2099][Tr: 69.93 Te: 32.05]
+[Tue, 03 Sep 2019 17:36:27][Iter: 21000][Ep: 21000.00][R: -2.1380][Tr: 72.22 Te: 43.59]
+[Tue, 03 Sep 2019 17:37:04][Iter: 22000][Ep: 22000.00][R: -2.2593][Tr: 71.90 Te: 42.31]
+[Tue, 03 Sep 2019 17:37:41][Iter: 23000][Ep: 23000.00][R: -2.1125][Tr: 72.55 Te: 41.03]
+[Tue, 03 Sep 2019 17:38:19][Iter: 24000][Ep: 24000.00][R: -2.5007][Tr: 68.95 Te: 34.62]
+[Tue, 03 Sep 2019 17:38:56][Iter: 25000][Ep: 25000.00][R: -2.6797][Tr: 67.97 Te: 19.23]
+[Tue, 03 Sep 2019 17:39:33][Iter: 26000][Ep: 26000.00][R: -2.3321][Tr: 71.57 Te: 32.05]
+[Tue, 03 Sep 2019 17:40:10][Iter: 27000][Ep: 27000.00][R: -2.3439][Tr: 68.63 Te: 39.74]
+[Tue, 03 Sep 2019 17:40:48][Iter: 28000][Ep: 28000.00][R: -2.5242][Tr: 70.26 Te: 28.21]
+[Tue, 03 Sep 2019 17:41:25][Iter: 29000][Ep: 29000.00][R: -2.5807][Tr: 67.65 Te: 20.51]
+[Tue, 03 Sep 2019 17:42:04][Iter: 30000][Ep: 30000.00][R: -2.5049][Tr: 69.28 Te: 23.08]
+[Tue, 03 Sep 2019 17:42:41][Iter: 31000][Ep: 31000.00][R: -2.3038][Tr: 71.90 Te: 37.18]
+[Tue, 03 Sep 2019 17:43:18][Iter: 32000][Ep: 32000.00][R: -2.5701][Tr: 68.30 Te: 37.18]
+[Tue, 03 Sep 2019 17:43:55][Iter: 33000][Ep: 33000.00][R: -2.6640][Tr: 66.67 Te: 26.92]
+[Tue, 03 Sep 2019 17:44:32][Iter: 34000][Ep: 34000.00][R: -2.5528][Tr: 69.61 Te: 35.90]
+[Tue, 03 Sep 2019 17:45:10][Iter: 35000][Ep: 35000.00][R: -2.6944][Tr: 67.65 Te: 29.49]
+[Tue, 03 Sep 2019 17:45:47][Iter: 36000][Ep: 36000.00][R: -2.2143][Tr: 71.90 Te: 38.46]
+[Tue, 03 Sep 2019 17:46:24][Iter: 37000][Ep: 37000.00][R: -2.2669][Tr: 70.59 Te: 35.90]
+[Tue, 03 Sep 2019 17:47:01][Iter: 38000][Ep: 38000.00][R: -2.6144][Tr: 68.95 Te: 34.62]
+[Tue, 03 Sep 2019 17:47:38][Iter: 39000][Ep: 39000.00][R: -2.6264][Tr: 68.30 Te: 24.36]
+[Tue, 03 Sep 2019 17:48:16][Iter: 40000][Ep: 40000.00][R: -3.0724][Tr: 64.05 Te: 33.33]
+[Tue, 03 Sep 2019 17:48:53][Iter: 41000][Ep: 41000.00][R: -2.6412][Tr: 68.30 Te: 33.33]
+[Tue, 03 Sep 2019 17:49:31][Iter: 42000][Ep: 42000.00][R: -2.7471][Tr: 69.61 Te: 23.08]
+[Tue, 03 Sep 2019 17:50:08][Iter: 43000][Ep: 43000.00][R: -2.9185][Tr: 66.34 Te: 17.95]
+[Tue, 03 Sep 2019 17:50:45][Iter: 44000][Ep: 44000.00][R: -2.5512][Tr: 65.69 Te: 20.51]
+[Tue, 03 Sep 2019 17:51:23][Iter: 45000][Ep: 45000.00][R: -3.1131][Tr: 64.38 Te: 21.79]
+[Tue, 03 Sep 2019 17:52:01][Iter: 46000][Ep: 46000.00][R: -2.8485][Tr: 67.65 Te: 21.79]
+[Tue, 03 Sep 2019 17:52:38][Iter: 47000][Ep: 47000.00][R: -3.1617][Tr: 63.73 Te: 19.23]
+[Tue, 03 Sep 2019 17:53:16][Iter: 48000][Ep: 48000.00][R: -3.3918][Tr: 63.07 Te: 20.51]
+[Tue, 03 Sep 2019 17:53:53][Iter: 49000][Ep: 49000.00][R: -2.8423][Tr: 67.65 Te: 24.36]
+Saving : models/tasks_final_Tue-03-Sep-2019-17:54:31_150H_0.0100lr_False_4_3.pickle
