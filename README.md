@@ -13,7 +13,7 @@ AAMAS 2020
 
 ## Installation
 
-All our code is implemented in PyTorch. Current version has been tested in Python 3.6 and PyTorch 1.4.
+All our code is implemented in PyTorch. The current version has been tested in Python 3.6 and PyTorch 1.4.
 
 Our code also uses some python packages that can be installed as follows:
 
