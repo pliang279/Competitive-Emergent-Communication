@@ -1,4 +1,4 @@
-# On Emergent Communication in Competitive Multi-Agent Teams
+# Emergent Communication in Competitive Multi-Agent Teams
 
 > Pytorch implementation for emergent communication in competitive settings.
 
