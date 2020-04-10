@@ -43,7 +43,7 @@ https://github.com/pliang279/Competitive-Emergent-Communication.git
 
 ## Usage
 
-Please look at the scripts under `scipts/` to see how train our model.
+Please look at the scripts under `scripts/` to see how train our model.
 
 For example, `scripts/train_111.sh` represents training a team with 3 sources of competitive influence: reward sharing, dialog overhearing, and task sharing.
 
